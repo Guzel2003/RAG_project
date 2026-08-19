@@ -1,0 +1,28 @@
+run:
+  name: rag_chunking
+  seed: 42
+
+paths:
+  input_jsonl: data/prepared/documents.jsonl
+  output_dir: data/chunks
+  json_filename: chunks.json
+  jsonl_filename: chunks.jsonl
+  manifest_filename: manifest.json
+
+chunking:
+  strategy: sentence
+  chunk_size: 256
+  chunk_overlap: 50
+  tokenizer_model: text-embedding-3-small
+  embedding_model: text-embedding-3-small
+  preserve_section_boundaries: true
+  preserve_block_boundaries: true
+  min_chunk_tokens: 50
+  max_chunk_tokens: 320
+  min_quality_score: 0.3
+
+validation:
+  fail_on_validation_error: false
+
+logging:
+  level: INFO

@@ -14,7 +14,6 @@ src/*.egg-info/
 # Файлы настроек PyCharm
 ../.idea/
 *.iml
-data/raw/
 
 # Файлы операционной системы
 .DS_Store
@@ -27,7 +26,6 @@ Thumbs.db
 
 # Логи
 logs/
-*.log
 *.exe
 *.msi
 
