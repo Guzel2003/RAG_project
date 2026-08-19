@@ -1,16 +1,21 @@
 # Папка с виртуальным окружением Python
 venv/
 .env/
+.venv/
 
 # Файлы кэша Python
 __pycache__/
 *.py[cod]
 *$py.class
+.Python
+*.egg-info/
+src/*.egg-info/
 
 # Файлы настроек PyCharm
 ../.idea/
 *.iml
 data/raw/
+
 # Файлы операционной системы
 .DS_Store
 Thumbs.db
@@ -21,6 +26,7 @@ Thumbs.db
 *.pem
 
 # Логи
+logs/
 *.log
 *.exe
 *.msi
