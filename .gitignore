@@ -32,3 +32,5 @@ logs/
 # Временные файлы
 *.tmp
 *.temp
+
+data/embeddings
