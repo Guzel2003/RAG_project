@@ -10,7 +10,7 @@ __pycache__/
 # Файлы настроек PyCharm
 ../.idea/
 *.iml
-
+data/raw/
 # Файлы операционной системы
 .DS_Store
 Thumbs.db
