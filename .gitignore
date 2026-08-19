@@ -1,0 +1,30 @@
+# Папка с виртуальным окружением Python
+venv/
+.env/
+
+# Файлы кэша Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Файлы настроек PyCharm
+../.idea/
+*.iml
+
+# Файлы операционной системы
+.DS_Store
+Thumbs.db
+
+# Файлы с секретными данными
+.env
+*.key
+*.pem
+
+# Логи
+*.log
+*.exe
+*.msi
+
+# Временные файлы
+*.tmp
+*.temp
