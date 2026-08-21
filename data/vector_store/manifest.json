@@ -1,0 +1,13 @@
+{
+  "run_id": "rag_vector_store",
+  "timestamp": "2026-08-20T19:03:05.091068+00:00",
+  "vector_store": "qdrant_local",
+  "collection_name": "construction_docs",
+  "input_embeddings": 5855,
+  "uploaded_points": 5855,
+  "validation_status": "success",
+  "artifacts": {
+    "validation": "data\\vector_store\\validation.json",
+    "search_results": "data\\vector_store\\search_results.json"
+  }
+}

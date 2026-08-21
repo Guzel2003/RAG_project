@@ -1,0 +1,9 @@
+{
+  "status": "success",
+  "expected_points": 5855,
+  "actual_points": 5855,
+  "actual_vectors": 5855,
+  "counts_match": true,
+  "payload_structure_ok": true,
+  "sample_chunk_id": "86479890daf3e2bcc81582cc"
+}

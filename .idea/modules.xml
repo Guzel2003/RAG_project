@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/rag-prep.iml" filepath="$PROJECT_DIR$/.idea/rag-prep.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/rag-prep@1.iml" filepath="$PROJECT_DIR$/.idea/rag-prep@1.iml" />
     </modules>
   </component>
 </project>

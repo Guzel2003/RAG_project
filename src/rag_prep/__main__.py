@@ -8,6 +8,9 @@ if len(sys.argv) > 1 and sys.argv[1] == "chunk":
 elif len(sys.argv) > 1 and sys.argv[1] == "embed":
     from .cli_embeddings import main
     sys.argv.pop(1)
+elif len(sys.argv) > 1 and sys.argv[1] == "vector-store":
+    from .cli_vector_store import main
+    sys.argv.pop(1)
 else:
     from .cli import main
 

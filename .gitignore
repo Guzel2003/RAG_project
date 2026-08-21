@@ -33,4 +33,8 @@ logs/
 *.tmp
 *.temp
 
-data/embeddings
+data/raw/
+data/prepared/
+data/chunks/
+data/embeddings/
+data/qdrant_storage/

@@ -1,0 +1,22 @@
+run:
+  name: rag_vector_store
+  seed: 42
+
+paths:
+  input_jsonl: data/embeddings/embeddings.jsonl
+  output_dir: data/vector_store
+  storage_dir: data/qdrant_storage
+
+vector_store:
+  provider: qdrant_local
+  collection_name: construction_docs
+  recreate_collection: true
+  distance_metric: Cosine
+  batch_size: 100
+
+search:
+  top_k: 5
+  num_test_queries: 3
+
+logging:
+  level: INFO

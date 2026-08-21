@@ -9,3 +9,4 @@ PyMuPDF>=1.24.0
 tiktoken>=0.5.0
 fastembed>=0.2.0
 numpy>=1.24.0
+qdrant-client>=1.7.0
