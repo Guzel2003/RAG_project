@@ -1,113 +1,371 @@
 [
   {
-    "query_text_preview": "В случаях, предусмотренных пунктом 3 части 1, пунктом 3 части 2, пунктом 2 части 4 настоящей статьи,...",
-    "query_chunk_id": "d89bd8ce8dbca22cb500d928",
+    "query_text": "Срок такого согласования не может превышать тридцать дней со дня поступления в уполномоченный исполнительный орган субъекта Российской Федерации проекта решения о комплексном развитии территории жилой застройки, проекта решения о комплексном развитии территории нежилой застройки.\n(в ред. Федерального закона от 08.08.2024 N 232-ФЗ)\n5.",
+    "query_chunk_id": "dc6a85c77de8898d15bfaec0",
     "top_k_results": [
       {
         "score": 1.0,
-        "chunk_id": "d89bd8ce8dbca22cb500d928",
+        "chunk_id": "dc6a85c77de8898d15bfaec0",
         "document_id": "056a1e88b0b761c66b3981c7",
-        "text_preview": "В случаях, предусмотренных пунктом 3 части 1, пунктом 3 части 2, пунктом 2 части 4 настоящей статьи,..."
+        "text": "Срок такого согласования не может превышать тридцать дней со дня поступления в уполномоченный исполнительный орган субъекта Российской Федерации проекта решения о комплексном развитии территории жилой застройки, проекта решения о комплексном развитии территории нежилой застройки.\n(в ред. Федерального закона от 08.08.2024 N 232-ФЗ)\n5.",
+        "metadata": {
+          "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "embedding_provider": "local",
+          "embedding_dimensions": 384,
+          "embedding_run_id": "rag_embeddings",
+          "embedded_at": "2026-08-20T14:15:09.031943+00:00",
+          "text_hash": "1d1c97827c2ec087f158bb67046e5dbfcfa120b86761ec8ba83f74b1941d80e1",
+          "embedding_hash": "0e022234f4dc07b393dfcc349e7d2b666f752b8613779a7c95d9f18eaafe518e",
+          "lineage": {
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
+            "origin_document_id": "056a1e88b0b761c66b3981c7",
+            "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+          },
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
+          "section": "full_document",
+          "position": 2978
+        }
       },
       {
-        "score": 0.9841,
-        "chunk_id": "dac843e0c946a9a4a4f5cb88",
+        "score": 0.8901,
+        "chunk_id": "5a4fca52af5dd2df5d8f8ee0",
         "document_id": "056a1e88b0b761c66b3981c7",
-        "text_preview": "В случаях, предусмотренных пунктом 3 части 1, пунктом 3 части 2 настоящей статьи, проект схемы терри..."
+        "text": "в отношении которой подготовлен проект решения о комплексном развитии территории.\n4. Решение о комплексном развитии территории жилой застройки принимается в срок не более чем тридцать дней со дня окончания срока, установленного нормативным правовым актом субъекта Российской Федерации для проведения общих собраний собственников помещений в многоквартирных домах, предусмотренных пунктом 2 части 2 статьи 65 настоящего Кодекса.\n5.",
+        "metadata": {
+          "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "embedding_provider": "local",
+          "embedding_dimensions": 384,
+          "embedding_run_id": "rag_embeddings",
+          "embedded_at": "2026-08-20T14:15:21.451614+00:00",
+          "text_hash": "7eab4fa7be33207333fcd39a99cee2fa86de17a55f977e63bd18934bb63207b1",
+          "embedding_hash": "9833bb455bffca177a354b9ada7cf9e2204d6ddf29cc23a23d80af492184c9a6",
+          "lineage": {
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
+            "origin_document_id": "056a1e88b0b761c66b3981c7",
+            "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+          },
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
+          "section": "full_document",
+          "position": 3024
+        }
       },
       {
-        "score": 0.9224,
-        "chunk_id": "549af778c96f4c5ab551a885",
+        "score": 0.881,
+        "chunk_id": "e5d2eaebb61cf1e9a7aabaf3",
         "document_id": "056a1e88b0b761c66b3981c7",
-        "text_preview": "(часть 2.2 введена Федеральным законом от 01.04.2025 N 52-ФЗ)\n3. Проект схемы территориального плани..."
+        "text": "Решение о комплексном развитии территории, указанное в пункте 1 части 2 настоящей статьи, подлежит согласованию с субъектом Российской Федерации, в границах которого расположена территория, подлежащая комплексному развитию, в порядке, установленном Правительством Российской Федерации. Срок указанного согласования не может превышать тридцать дней со дня направления в высший исполнительный орган субъекта Российской Федерации предложения о согласовании этого решения.\n(в ред. Федерального закона от 08.08.2024 N 232-ФЗ)\n3.1.",
+        "metadata": {
+          "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "embedding_provider": "local",
+          "embedding_dimensions": 384,
+          "embedding_run_id": "rag_embeddings",
+          "embedded_at": "2026-08-20T14:15:09.031943+00:00",
+          "text_hash": "b8fc51094ad8b73355e581613f0be83fc38927643b0dccc117cbb5c32ab6f0e9",
+          "embedding_hash": "9043dae188b8b9ec80f6972bf103cf81793b3cd2eaf95eb6614f701301941601",
+          "lineage": {
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
+            "origin_document_id": "056a1e88b0b761c66b3981c7",
+            "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+          },
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
+          "section": "full_document",
+          "position": 2974
+        }
       },
       {
-        "score": 0.8831,
-        "chunk_id": "71eb7c040241f1246fc9233e",
+        "score": 0.8784,
+        "chunk_id": "93f970238c8b94b71646e7fa",
         "document_id": "056a1e88b0b761c66b3981c7",
-        "text_preview": "(в ред. Федеральных законов от 20.03.2011 N 41-ФЗ, от 13.06.2023 N 240-ФЗ)\n4. Проект генерального пл..."
+        "text": "(часть 5 в ред. Федерального закона от 20.03.2011 N 41-ФЗ)\n6. Максимальный срок рассмотрения проекта схемы территориального планирования Российской Федерации и подготовки заключений на такой проект органами местного самоуправления не может превышать тридцать дней со дня получения уведомления, указанного в части 2 настоящей статьи. При непоступлении заключений органов местного самоуправления в установленный срок проект схемы территориального планирования Российской Федерации считается согласованным с этими органами.\n(в ред.",
+        "metadata": {
+          "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "embedding_provider": "local",
+          "embedding_dimensions": 384,
+          "embedding_run_id": "rag_embeddings",
+          "embedded_at": "2026-08-20T14:06:47.067708+00:00",
+          "text_hash": "85086e806c37109f951f419d13a39c9ea49137cc3d3fa625841290516102ee11",
+          "embedding_hash": "7fc809602e544b5bf109def0b333776ef823a9c6cb89b2f052eef628a27fc3de",
+          "lineage": {
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
+            "origin_document_id": "056a1e88b0b761c66b3981c7",
+            "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+          },
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
+          "section": "full_document",
+          "position": 375
+        }
       },
       {
-        "score": 0.87,
-        "chunk_id": "1cdf198515c554ee1e03f3be",
+        "score": 0.8365,
+        "chunk_id": "5fc3a23e8ccc383339f62df5",
         "document_id": "056a1e88b0b761c66b3981c7",
-        "text_preview": "предусматривающую размещение объектов местного значения муниципального района и иных объектов капита..."
+        "text": "(в ред. Федерального закона от 08.08.2024 N 232-ФЗ)\n8. В случае поступления от одного или нескольких субъектов Российской Федерации сводных заключений, содержащих положения о несогласии с проектом схемы территориального планирования Российской Федерации с обоснованием принятого решения, в течение пятнадцати дней со дня истечения установленного срока согласования такого проекта принимается решение о создании согласительной комиссии. Максимальный срок работы согласительной комиссии не может превышать два месяца.\n(в ред. Федерального закона от 31.07.2020 N 264-ФЗ)\n9.",
+        "metadata": {
+          "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "embedding_provider": "local",
+          "embedding_dimensions": 384,
+          "embedding_run_id": "rag_embeddings",
+          "embedded_at": "2026-08-20T14:06:47.067708+00:00",
+          "text_hash": "8c3db94fd0b6d5168db3166a21068df72bc4590e8bcba3c553c84c22aa1e2e67",
+          "embedding_hash": "5b265fe693bf5d64cbc1e51634a6a08dcca3ccb425d774426c3d52afc4c92f9a",
+          "lineage": {
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
+            "origin_document_id": "056a1e88b0b761c66b3981c7",
+            "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+          },
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
+          "section": "full_document",
+          "position": 377
+        }
       }
     ],
-    "is_first_result_relevant": true
+    "is_exact_match_first": true,
+    "is_relevant_in_top_k": true
   },
   {
-    "query_text_preview": "Применение на обязательной основе пунктов 5.16.4, 5.16.10, 5.16.11 обеспечивает соблюдение требовани...",
-    "query_chunk_id": "c096ac42581af540067b70bb",
+    "query_text": "После размещения на официальном сайте Министерства в сети Интернет новой xml-схемы для соответствующего документа в течение трех месяцев со дня введения ее в действие обеспечивается доступ к xml-схеме, прекратившей свое действие.\n\n5. В случае если на официальном сайте Министерства в сети Интернет отсутствует xml-схема, подлежащая использованию для формирования исполнительной документации в форме электронных документов, исполнительная документация в форме электронных документов представляется в следующих форматах:\n\nа) doc, docx, odt - для документов с текстовым содержанием, не включающим формулы;",
+    "query_chunk_id": "4847568a3c816c880adaedb7",
     "top_k_results": [
       {
         "score": 1.0,
-        "chunk_id": "c096ac42581af540067b70bb",
-        "document_id": "b57b2ddf5e32bd5a3ecd7bdf",
-        "text_preview": "Применение на обязательной основе пунктов 5.16.4, 5.16.10, 5.16.11 обеспечивает соблюдение требовани..."
+        "chunk_id": "4847568a3c816c880adaedb7",
+        "document_id": "69c4389c629ff4f8d0d4b1ba",
+        "text": "После размещения на официальном сайте Министерства в сети Интернет новой xml-схемы для соответствующего документа в течение трех месяцев со дня введения ее в действие обеспечивается доступ к xml-схеме, прекратившей свое действие.\n\n5. В случае если на официальном сайте Министерства в сети Интернет отсутствует xml-схема, подлежащая использованию для формирования исполнительной документации в форме электронных документов, исполнительная документация в форме электронных документов представляется в следующих форматах:\n\nа) doc, docx, odt - для документов с текстовым содержанием, не включающим формулы;",
+        "metadata": {
+          "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "embedding_provider": "local",
+          "embedding_dimensions": 384,
+          "embedding_run_id": "rag_embeddings",
+          "embedded_at": "2026-08-20T14:01:15.120853+00:00",
+          "text_hash": "1e5d1f1d542244c6da48d137f7b1a388b5c485cb85ab8fb48d0766b93cb4dcb4",
+          "embedding_hash": "54671ed5c608654a1ad9688b4ada490abe70c13c838bbb4f41f557b123fc0c02",
+          "lineage": {
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Prikaz-Minstroya-Rossii-ot-16.05.2023-344-pr-Ob-utverzhdenii-sostava-i-poryadka-vedeniya-ispolnitelnoj-dokumentatsii.docx",
+            "origin_document_id": "69c4389c629ff4f8d0d4b1ba",
+            "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+          },
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Prikaz-Minstroya-Rossii-ot-16.05.2023-344-pr-Ob-utverzhdenii-sostava-i-poryadka-vedeniya-ispolnitelnoj-dokumentatsii.docx",
+          "section": "full_document",
+          "position": 46
+        }
       },
       {
-        "score": 0.8478,
-        "chunk_id": "15882ebfe15ca179284cc9d3",
-        "document_id": "b57b2ddf5e32bd5a3ecd7bdf",
-        "text_preview": "Применение на обязательной основе пунктов 5.11.11 - 5.11.16 обеспечивает соблюдение требований Федер..."
+        "score": 0.8411,
+        "chunk_id": "211ab5a4b4914692796f9186",
+        "document_id": "69c4389c629ff4f8d0d4b1ba",
+        "text": "Исполнительная документация в форме электронных документов формируется и представляется в виде файлов в формате xml (за исключением случая, установленного пунктом 5 настоящего Порядка).\n\nСхемы, подлежащие использованию для формирования документов в формате xml (далее - xml-схемы), размещаются на официальном сайте Министерства строительства и жилищно-коммунального хозяйства Российской Федерации (далее - Министерство) в информационно-телекоммуникационной сети \"Интернет\" (далее - сеть Интернет) и вводятся в действие по истечении трех месяцев со дня размещения.",
+        "metadata": {
+          "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "embedding_provider": "local",
+          "embedding_dimensions": 384,
+          "embedding_run_id": "rag_embeddings",
+          "embedded_at": "2026-08-20T14:01:15.120853+00:00",
+          "text_hash": "73fd55e38caadb11f35c77e03142559b37af8f14d2ca32250c262f402e286c6e",
+          "embedding_hash": "f6753a2d4dcb8d6b3dc035cc4cd4382cf2e5f4c2c29a2423d99fbfedc046534f",
+          "lineage": {
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Prikaz-Minstroya-Rossii-ot-16.05.2023-344-pr-Ob-utverzhdenii-sostava-i-poryadka-vedeniya-ispolnitelnoj-dokumentatsii.docx",
+            "origin_document_id": "69c4389c629ff4f8d0d4b1ba",
+            "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+          },
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Prikaz-Minstroya-Rossii-ot-16.05.2023-344-pr-Ob-utverzhdenii-sostava-i-poryadka-vedeniya-ispolnitelnoj-dokumentatsii.docx",
+          "section": "full_document",
+          "position": 45
+        }
       },
       {
-        "score": 0.8406,
-        "chunk_id": "a700b07442fa8ceac6a13379",
-        "document_id": "b57b2ddf5e32bd5a3ecd7bdf",
-        "text_preview": "Применение на обязательной основе пунктов 6.6.1 - 6.6.3 обеспечивает соблюдение требований Федеральн..."
+        "score": 0.6452,
+        "chunk_id": "f069889769ab4f74b0be6591",
+        "document_id": "056a1e88b0b761c66b3981c7",
+        "text": "предусмотренные частями 1, 2 и 4 настоящей статьи, изменения, внесенные в эти документы, решения, принятые постоянно действующим коллегиальным органом управления саморегулируемой организации, в срок не позднее чем через три рабочих дня со дня их принятия подлежат размещению на сайте этой саморегулируемой организации в сети \"Интернет\" и направлению (за исключением решений,",
+        "metadata": {
+          "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "embedding_provider": "local",
+          "embedding_dimensions": 384,
+          "embedding_run_id": "rag_embeddings",
+          "embedded_at": "2026-08-20T14:12:16.948118+00:00",
+          "text_hash": "6846f55aa0fc59390ba44aa3518ba8ac1ab87abb97361f8d100a08acf2d34a56",
+          "embedding_hash": "b9589a699cad46eb211dfc7606ccfdc8813b7d51648fc51f581b9dad7d781119",
+          "lineage": {
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
+            "origin_document_id": "056a1e88b0b761c66b3981c7",
+            "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+          },
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
+          "section": "full_document",
+          "position": 2038
+        }
       },
       {
-        "score": 0.839,
-        "chunk_id": "1f9ee854657fbff956441825",
-        "document_id": "b57b2ddf5e32bd5a3ecd7bdf",
-        "text_preview": "Применение на обязательной основе пункта 6.2.15 обеспечивает соблюдение требований Федерального зако..."
+        "score": 0.6132,
+        "chunk_id": "e819a49acd0150224f558703",
+        "document_id": "69c4389c629ff4f8d0d4b1ba",
+        "text": "4. Исполнительная документация в форме электронных документов подписывается лицами, указанными в пункте 3 настоящего Порядка, усиленной неквалифицированной электронной подписью, сертификат ключа проверки которой создан и используется в инфраструктуре, обеспечивающей информационно-технологическое взаимодействие информационных систем, используемых для предоставления государственных и муниципальных услуг в электронной форме, в порядке, установленном Правилами создания и использования сертификата ключа проверки усиленной неквалифицированной электронной подписи в инфраструктуре,",
+        "metadata": {
+          "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "embedding_provider": "local",
+          "embedding_dimensions": 384,
+          "embedding_run_id": "rag_embeddings",
+          "embedded_at": "2026-08-20T14:01:15.120853+00:00",
+          "text_hash": "7108dc47bbed9f14cb8af38d5019d025e374fe2ac93b58b6d4e3615010e02c1d",
+          "embedding_hash": "560fd01c44dd454bc7d7fcd2be1b0757889a5b7da3a1050a4f2ab749a8e8d882",
+          "lineage": {
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Prikaz-Minstroya-Rossii-ot-16.05.2023-344-pr-Ob-utverzhdenii-sostava-i-poryadka-vedeniya-ispolnitelnoj-dokumentatsii.docx",
+            "origin_document_id": "69c4389c629ff4f8d0d4b1ba",
+            "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+          },
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Prikaz-Minstroya-Rossii-ot-16.05.2023-344-pr-Ob-utverzhdenii-sostava-i-poryadka-vedeniya-ispolnitelnoj-dokumentatsii.docx",
+          "section": "full_document",
+          "position": 43
+        }
       },
       {
-        "score": 0.8373,
-        "chunk_id": "ec3af7826becceaad0bc6d4e",
-        "document_id": "b57b2ddf5e32bd5a3ecd7bdf",
-        "text_preview": "Применение на обязательной основе пункта 6.2.11 обеспечивает соблюдение требований Федерального зако..."
+        "score": 0.5927,
+        "chunk_id": "73f184bb77b55e5266c77e0a",
+        "document_id": "056a1e88b0b761c66b3981c7",
+        "text": "КонсультантПлюс: примечание.\nС 01.09.2026 в ч. 4.1 ст. 55 вносятся изменения (ФЗ от 31.07.2025 N 304-ФЗ). См. будущую редакцию.\n4.1. Для получения разрешения на ввод объекта в эксплуатацию разрешается требовать только указанные в частях 3 и 4 настоящей статьи документы. Документы, предусмотренные частями 3 и 4 настоящей статьи, могут быть направлены в электронной форме.",
+        "metadata": {
+          "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "embedding_provider": "local",
+          "embedding_dimensions": 384,
+          "embedding_run_id": "rag_embeddings",
+          "embedded_at": "2026-08-20T14:11:38.977201+00:00",
+          "text_hash": "0c56cbc9977903ce653b7c3e988e399261a2ac0ffa423b3b5ca2f94a57d9de13",
+          "embedding_hash": "da179c8494a20dbe26ae1e4d1433e96a2ce0b132618de23460e46f03bbc4c062",
+          "lineage": {
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
+            "origin_document_id": "056a1e88b0b761c66b3981c7",
+            "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+          },
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
+          "section": "full_document",
+          "position": 1889
+        }
       }
     ],
-    "is_first_result_relevant": true
+    "is_exact_match_first": true,
+    "is_relevant_in_top_k": true
   },
   {
-    "query_text_preview": "(часть 9.1 введена Федеральным законом от 24.06.2025 N 181-ФЗ)\n9.2....",
-    "query_chunk_id": "7fb6264a7afc4d33867f1ca6",
+    "query_text": "- в графе 17 - порядковый номер листа разрешения. Если разрешение состоит из одного листа, графу не заполняют;\n\n- в графе 18 - общее количество листов разрешения.\n\nВНЕСЕНИЕ ИЗМЕНЕНИЙ РУКОПИСНЫМ СПОСОБОМ\n\nМ.1 Внесение изменений зачеркиванием размеров, знаков, надписей, отдельных слов и строк осуществляют сплошной тонкой линией с проставлением новой информации в непосредственной близости от зачеркнутой.",
+    "query_chunk_id": "78ede988e068eb94cefde19e",
     "top_k_results": [
       {
         "score": 1.0,
-        "chunk_id": "7fb6264a7afc4d33867f1ca6",
-        "document_id": "056a1e88b0b761c66b3981c7",
-        "text_preview": "(часть 9.1 введена Федеральным законом от 24.06.2025 N 181-ФЗ)\n9.2...."
+        "chunk_id": "78ede988e068eb94cefde19e",
+        "document_id": "d3c3d95f0527f35a309a728d",
+        "text": "- в графе 17 - порядковый номер листа разрешения. Если разрешение состоит из одного листа, графу не заполняют;\n\n- в графе 18 - общее количество листов разрешения.\n\nВНЕСЕНИЕ ИЗМЕНЕНИЙ РУКОПИСНЫМ СПОСОБОМ\n\nМ.1 Внесение изменений зачеркиванием размеров, знаков, надписей, отдельных слов и строк осуществляют сплошной тонкой линией с проставлением новой информации в непосредственной близости от зачеркнутой.",
+        "metadata": {
+          "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "embedding_provider": "local",
+          "embedding_dimensions": 384,
+          "embedding_run_id": "rag_embeddings",
+          "embedded_at": "2026-08-20T13:58:37.566669+00:00",
+          "text_hash": "69dc1e05746507d32e1151f4c34790ab7eca710891cc8bc61faca34a55b677e2",
+          "embedding_hash": "60951e7421f516adcf105da103ee6fbe16666a04590cd6dcf001a0f67aecb9c6",
+          "lineage": {
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\84480d8e_8bbe_4ab1_9f83_23eb15760003.docx",
+            "origin_document_id": "d3c3d95f0527f35a309a728d",
+            "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+          },
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\84480d8e_8bbe_4ab1_9f83_23eb15760003.docx",
+          "section": "full_document",
+          "position": 204
+        }
       },
       {
-        "score": 0.8965,
-        "chunk_id": "ed1070581599cf89f502ad18",
-        "document_id": "056a1e88b0b761c66b3981c7",
-        "text_preview": "(часть 10.1 введена Федеральным законом от 30.12.2015 N 459-ФЗ; в ред. Федеральных законов от 03.08...."
+        "score": 0.8162,
+        "chunk_id": "ea5746e1bff7285153e8c2af",
+        "document_id": "d3c3d95f0527f35a309a728d",
+        "text": "Л.2 В графах разрешения указывают:\n\n- в графе 1 - обозначение разрешения, состоящее из порядкового номера разрешения по журналу регистрации разрешений по ГОСТ Р 21.1003 и через разделительный знак (дефис, наклонную черту и т.п.) - двух последних цифр года выпуска разрешения.\n\nПример - 15-12; 15/12;\n\n- в графе 2 - обозначение документа, в который вносят изменение. При выпуске общего разрешения на внесение изменений в несколько документов приводят обозначения всех документов, при этом для второго и последующих документов базовую часть обозначения допускается не указывать, например 2345-12-АР; КЖ; ОВ;",
+        "metadata": {
+          "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "embedding_provider": "local",
+          "embedding_dimensions": 384,
+          "embedding_run_id": "rag_embeddings",
+          "embedded_at": "2026-08-20T13:58:37.566669+00:00",
+          "text_hash": "44808946e412824f63d024a46ba3588efc627d7705a9211fcc433539b1c5ce55",
+          "embedding_hash": "02cede6971d4f23e577e50a0da3747b81db1bbc4524e0891278a3c0055a1968f",
+          "lineage": {
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\84480d8e_8bbe_4ab1_9f83_23eb15760003.docx",
+            "origin_document_id": "d3c3d95f0527f35a309a728d",
+            "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+          },
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\84480d8e_8bbe_4ab1_9f83_23eb15760003.docx",
+          "section": "full_document",
+          "position": 197
+        }
       },
       {
-        "score": 0.8957,
-        "chunk_id": "c99da507410d277cd67c735e",
-        "document_id": "056a1e88b0b761c66b3981c7",
-        "text_preview": "(часть 9 введена Федеральным законом от 29.12.2017 N 463-ФЗ)..."
+        "score": 0.7723,
+        "chunk_id": "ab2f7c7a5c2b88dc61f5f1b0",
+        "document_id": "d3c3d95f0527f35a309a728d",
+        "text": "Л.1 Разрешение на внесение изменений выполняют по форме 9 (первый лист) и по форме 9а (последующие листы).\n\n1 Допускается для последующих листов разрешения использовать форму 9.\n\n2 Допускается дополнять форму графами для идентификации разрешения в электронном виде. Расположение и размеры граф организация-разработчик устанавливает самостоятельно.\n\n3 В графах 11, 16 при указании календарной даты на бумажном носителе год указывают двумя последними цифрами.\n\n4 Подпись лица, принявшего разрешение на хранение, и дату приемки приводят на поле для подшивки без нанесения граф.",
+        "metadata": {
+          "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "embedding_provider": "local",
+          "embedding_dimensions": 384,
+          "embedding_run_id": "rag_embeddings",
+          "embedded_at": "2026-08-20T13:58:37.566669+00:00",
+          "text_hash": "deae23ac383987c2a1f1561d454364d196b7a02f59bb216c02cf132d2ca805b3",
+          "embedding_hash": "bb28f2011fa87138d62607395e80faea4598601e3b603729f85b557ba5bd0f70",
+          "lineage": {
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\84480d8e_8bbe_4ab1_9f83_23eb15760003.docx",
+            "origin_document_id": "d3c3d95f0527f35a309a728d",
+            "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+          },
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\84480d8e_8bbe_4ab1_9f83_23eb15760003.docx",
+          "section": "full_document",
+          "position": 196
+        }
       },
       {
-        "score": 0.8877,
-        "chunk_id": "a3948e82af15920b856382cf",
-        "document_id": "056a1e88b0b761c66b3981c7",
-        "text_preview": "(часть 12 введена Федеральным законом от 04.08.2023 N 438-ФЗ)..."
+        "score": 0.7655,
+        "chunk_id": "9eead315aa0434d0ba2f7a9a",
+        "document_id": "d3c3d95f0527f35a309a728d",
+        "text": "- в графе \"Примечание\" - дополнительные сведения, например количество листов и номер изменения документа, включенного в том*.\n\nВ конце содержания приводят общее количество листов документов, включенных в том.\n\nПервый лист содержания тома оформляют основной надписью по форме 5 (приложение Ж), последующие - по форме 6 (приложение Ж). Содержанию присваивают обозначение, состоящее из обозначения тома и через дефис шифра \"С\".\n\nПример - 2345-ПЗУ2-С; 2345-ИОС4.1.2-С.\n\nВ графе 5 основной надписи указывают \"Содержание тома\" и далее - номер соответствующего тома.",
+        "metadata": {
+          "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "embedding_provider": "local",
+          "embedding_dimensions": 384,
+          "embedding_run_id": "rag_embeddings",
+          "embedded_at": "2026-08-20T13:58:20.017777+00:00",
+          "text_hash": "a88ba11345f142dfe18d57be74ec42e98a279622626f250cf159131620fe8363",
+          "embedding_hash": "66a129335475298bf6a1a1cb60b02ad33987e503a11ac510717ec93614d919d2",
+          "lineage": {
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\84480d8e_8bbe_4ab1_9f83_23eb15760003.docx",
+            "origin_document_id": "d3c3d95f0527f35a309a728d",
+            "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+          },
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\84480d8e_8bbe_4ab1_9f83_23eb15760003.docx",
+          "section": "full_document",
+          "position": 138
+        }
       },
       {
-        "score": 0.8864,
-        "chunk_id": "e9314766fcc4a7f68c58b44d",
-        "document_id": "056a1e88b0b761c66b3981c7",
-        "text_preview": "(часть 8 введена Федеральным законом от 18.12.2006 N 232-ФЗ, в ред. Федеральных законов от 24.07.200..."
+        "score": 0.7489,
+        "chunk_id": "eca470c257fce8bd71d40002",
+        "document_id": "d3c3d95f0527f35a309a728d",
+        "text": "- в графе \"Всего листов (страниц) в док.\" - количество листов (страниц) в текстовом документе после внесения изменений;\n\n- в графе \"Подп.\" - подпись лица, ответственного за правильность внесения изменения;\n\nН.5 При замене всех листов подлинника в таблице регистрации изменений не воспроизводят номера изменений и другие данные, относящиеся ко всем ранее внесенным в документ изменениям.\n\nЖУРНАЛ ИЗМЕНЕНИЙ\n\nП.1 Журнал изменений (далее - журнал) выполняют по форме 11.\n\n1 Журнал выполняют на листах формата A3 по ГОСТ 2.301.\n\n2 Размеры граф журнала определяет организация-пользователь.",
+        "metadata": {
+          "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "embedding_provider": "local",
+          "embedding_dimensions": 384,
+          "embedding_run_id": "rag_embeddings",
+          "embedded_at": "2026-08-20T13:58:37.566669+00:00",
+          "text_hash": "05caa1b20743456391be59539221107746f70e4676dc08df543925d6d2b3e1a1",
+          "embedding_hash": "3abe02b633934d762002ada38b4e95bc6eb2341bbdf8aecc3fb252dc5cf9388d",
+          "lineage": {
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\84480d8e_8bbe_4ab1_9f83_23eb15760003.docx",
+            "origin_document_id": "d3c3d95f0527f35a309a728d",
+            "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+          },
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\84480d8e_8bbe_4ab1_9f83_23eb15760003.docx",
+          "section": "full_document",
+          "position": 212
+        }
       }
     ],
-    "is_first_result_relevant": true
+    "is_exact_match_first": true,
+    "is_relevant_in_top_k": true
   }
 ]

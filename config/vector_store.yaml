@@ -6,10 +6,15 @@ paths:
   input_jsonl: data/embeddings/embeddings.jsonl
   output_dir: data/vector_store
   storage_dir: data/qdrant_storage
+  artifacts:
+    validation: validation.json
+    search_results: search_results.json
+    manifest: manifest.json
 
 vector_store:
   provider: qdrant_local
   collection_name: construction_docs
+  vector_dimension: 384
   recreate_collection: true
   distance_metric: Cosine
   batch_size: 100

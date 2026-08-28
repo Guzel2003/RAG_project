@@ -11,46 +11,57 @@ LOGGER = logging.getLogger(__name__)
 class VectorStoreValidationStage:
     """Проверяет, что количество точек и payload корректны."""
 
-    def __init__(self, client, collection_name: str):
+    def __init__(self, client, collection_name: str, expected_dimension: int):
         self.client = client
         self.collection_name = collection_name
+        self.expected_dimension = expected_dimension
 
-    def run(self, expected_count: int) -> dict[str, Any]:
+    def run(self, expected_count: int, actual_uploaded: int) -> dict[str, Any]:
         info = self.client.get_collection(self.collection_name)
+        actual_points_count = info.points_count or 0
 
-        actual_count = info.points_count or 0
+        actual_dimension = info.config.params.vectors.size
+        actual_distance = str(info.config.params.vectors.distance)
+        dimension_match = (actual_dimension == self.expected_dimension)
 
-        # В новых версиях qdrant-client vectors_count может отсутствовать
-        # Используем points_count как fallback
-        vectors_count = getattr(info, 'vectors_count', actual_count) or actual_count
+        # Пункт 10: проверяем не 1, а до 10 точек
+        sample_size = min(10, actual_points_count)
+        payload_checks = {"text": 0, "chunk_id": 0, "document_id": 0, "metadata_ok": 0}
 
-        has_points = actual_count > 0
-        payload_ok = False
-        sample_point = None
-
-        if has_points:
-            # Достаем 1 случайную точку для проверки payload
+        if sample_size > 0:
             points, _ = self.client.scroll(
-                collection_name=self.collection_name,
-                limit=1,
-                with_payload=True,
-                with_vectors=False
+                collection_name=self.collection_name, limit=sample_size, with_payload=True, with_vectors=False
             )
-            if points:
-                sample_point = points[0]
-                payload = sample_point.payload
-                required_fields = ["text", "chunk_id", "document_id"]
-                payload_ok = all(field in payload for field in required_fields)
+            for pt in points:
+                payload = pt.payload or {}
+                if "text" in payload and isinstance(payload["text"], str) and payload["text"].strip():
+                    payload_checks["text"] += 1
+                if "chunk_id" in payload:
+                    payload_checks["chunk_id"] += 1
+                if "document_id" in payload:
+                    payload_checks["document_id"] += 1
+                if len(payload) > 1:
+                    payload_checks["metadata_ok"] += 1
 
+        # Пункт 11: детализированный результат
         result = {
-            "status": "success" if (actual_count == expected_count and payload_ok) else "failed",
+            "status": "success" if (actual_points_count == expected_count and dimension_match and payload_checks[
+                "chunk_id"] == sample_size) else "failed",
             "expected_points": expected_count,
-            "actual_points": actual_count,
-            "actual_vectors": vectors_count,
-            "counts_match": actual_count == expected_count,
-            "payload_structure_ok": payload_ok,
-            "sample_chunk_id": sample_point.payload.get("chunk_id") if sample_point else None
+            "actual_points": actual_points_count,
+            "actual_uploaded_from_pipeline": actual_uploaded,
+            "counts_match": actual_points_count == expected_count,
+            "expected_dimension": self.expected_dimension,
+            "actual_dimension": actual_dimension,
+            "dimension_match": dimension_match,
+            "actual_distance_metric": actual_distance,
+            "payload_structure_checks": {
+                "text_present_in_sample": f"{payload_checks['text']}/{sample_size}",
+                "chunk_id_present_in_sample": f"{payload_checks['chunk_id']}/{sample_size}",
+                "document_id_present_in_sample": f"{payload_checks['document_id']}/{sample_size}",
+                "metadata_rich_in_sample": f"{payload_checks['metadata_ok']}/{sample_size}"
+            },
+            "sample_chunk_id": points[0].payload.get("chunk_id") if points else None
         }
-
         LOGGER.info("Результат валидации БД: %s", result["status"])
         return result

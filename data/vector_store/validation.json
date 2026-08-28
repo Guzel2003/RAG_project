@@ -2,8 +2,17 @@
   "status": "success",
   "expected_points": 5855,
   "actual_points": 5855,
-  "actual_vectors": 5855,
+  "actual_uploaded_from_pipeline": 5855,
   "counts_match": true,
-  "payload_structure_ok": true,
+  "expected_dimension": 384,
+  "actual_dimension": 384,
+  "dimension_match": true,
+  "actual_distance_metric": "Cosine",
+  "payload_structure_checks": {
+    "text_present_in_sample": "10/10",
+    "chunk_id_present_in_sample": "10/10",
+    "document_id_present_in_sample": "10/10",
+    "metadata_rich_in_sample": "10/10"
+  },
   "sample_chunk_id": "86479890daf3e2bcc81582cc"
 }

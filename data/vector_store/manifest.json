@@ -1,13 +1,65 @@
 {
   "run_id": "rag_vector_store",
-  "timestamp": "2026-08-20T19:03:05.091068+00:00",
-  "vector_store": "qdrant_local",
-  "collection_name": "construction_docs",
-  "input_embeddings": 5855,
-  "uploaded_points": 5855,
+  "timestamp": "2026-08-28T17:57:17.656693+00:00",
+  "config_snapshot": {
+    "run": {
+      "name": "rag_vector_store",
+      "seed": 42
+    },
+    "paths": {
+      "input_jsonl": "data/embeddings/embeddings.jsonl",
+      "output_dir": "data/vector_store",
+      "storage_dir": "data/qdrant_storage",
+      "artifacts": {
+        "validation": "validation.json",
+        "search_results": "search_results.json",
+        "manifest": "manifest.json"
+      }
+    },
+    "vector_store": {
+      "provider": "qdrant_local",
+      "collection_name": "construction_docs",
+      "vector_dimension": 384,
+      "recreate_collection": true,
+      "distance_metric": "Cosine",
+      "batch_size": 100
+    },
+    "search": {
+      "top_k": 5,
+      "num_test_queries": 3
+    },
+    "logging": {
+      "level": "INFO"
+    }
+  },
+  "stats": {
+    "total_input_lines": 5855,
+    "valid_embeddings": 5855,
+    "dropped_embeddings": 0,
+    "actual_uploaded_points": 5855
+  },
   "validation_status": "success",
+  "validation_details": {
+    "status": "success",
+    "expected_points": 5855,
+    "actual_points": 5855,
+    "actual_uploaded_from_pipeline": 5855,
+    "counts_match": true,
+    "expected_dimension": 384,
+    "actual_dimension": 384,
+    "dimension_match": true,
+    "actual_distance_metric": "Cosine",
+    "payload_structure_checks": {
+      "text_present_in_sample": "10/10",
+      "chunk_id_present_in_sample": "10/10",
+      "document_id_present_in_sample": "10/10",
+      "metadata_rich_in_sample": "10/10"
+    },
+    "sample_chunk_id": "86479890daf3e2bcc81582cc"
+  },
   "artifacts": {
     "validation": "data\\vector_store\\validation.json",
-    "search_results": "data\\vector_store\\search_results.json"
+    "search_results": "data\\vector_store\\search_results.json",
+    "manifest": "data\\vector_store\\manifest.json"
   }
 }

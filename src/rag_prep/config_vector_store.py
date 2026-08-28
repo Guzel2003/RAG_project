@@ -13,15 +13,23 @@ class RunConfig(BaseModel):
     seed: int = 42
 
 
+class ArtifactsConfig(BaseModel):
+    validation: str = "validation.json"
+    search_results: str = "search_results.json"
+    manifest: str = "manifest.json"
+
+
 class PathsConfig(BaseModel):
     input_jsonl: str = "data/embeddings/embeddings.jsonl"
     output_dir: str = "data/vector_store"
     storage_dir: str = "data/qdrant_storage"
+    artifacts: ArtifactsConfig = ArtifactsConfig()
 
 
 class VectorStoreConfig(BaseModel):
     provider: str = "qdrant_local"
     collection_name: str = "construction_docs"
+    vector_dimension: int
     recreate_collection: bool = True
     distance_metric: str = "Cosine"
     batch_size: int = 100

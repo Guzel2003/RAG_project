@@ -23,51 +23,53 @@ LOGGER = logging.getLogger(__name__)
 def run_vector_store_pipeline(config_path: str) -> dict[str, Any]:
     cfg = load_vector_store_config(config_path)
     setup_logging(cfg.logging.level, "logs/vector_store.log")
-
     LOGGER.info("Запуск vector store с конфигом: %s", config_path)
 
-    # Определяем размерность из первой записи
     input_jsonl = Path(cfg.paths.input_jsonl)
-    with input_jsonl.open("r", encoding="utf-8") as f:
-        first_line = json.loads(f.readline())
-        dimension = len(first_line["embedding"])
 
-    # 1. Загрузка и проверка данных
-    loader = EmbeddingsLoadingStage(expected_dimension=dimension)
-    data = loader.run(input_jsonl)
-    LOGGER.info("Загружено embeddings: %d", len(data))
+    # 1. Загрузка (теперь размерность из конфига, а не из файла)
+    loader = EmbeddingsLoadingStage(expected_dimension=cfg.vector_store.vector_dimension)
+    total_lines, valid_data, errors = loader.run(input_jsonl)
 
     # 2. Индексация
     indexer = QdrantIndexingStage(cfg.model_dump())
-    indexer.setup_collection(vector_dimension=dimension)
-    uploaded_count = indexer.upload_embeddings(data)
-    LOGGER.info("Загружено точек: %d", uploaded_count)
+    indexer.setup_collection(vector_dimension=cfg.vector_store.vector_dimension)
+    indexer.upload_embeddings(valid_data)
 
-    # 3. Валидация базы
-    validator = VectorStoreValidationStage(indexer.client, indexer.collection_name)
-    validation_result = validator.run(expected_count=len(data))
+    # Получаем реальное количество точек в Qdrant после загрузки
+    collection_info = indexer.client.get_collection(indexer.collection_name)
+    actual_uploaded_count = collection_info.points_count or 0
 
-    # 4. Тестовый поиск
-    search_cfg = cfg.search
-    searcher = TestSearchStage(
+    # 3. Валидация (передаем ожидаемую размерность)
+    validator = VectorStoreValidationStage(
         indexer.client,
         indexer.collection_name,
-        top_k=search_cfg.top_k
+        expected_dimension=cfg.vector_store.vector_dimension
     )
-    search_results = searcher.run(data, num_queries=search_cfg.num_test_queries)
+    validation_result = validator.run(expected_count=len(valid_data), actual_uploaded=actual_uploaded_count)
+
+    # 4. Тестовый поиск (передаем seed)
+    search_cfg = cfg.search
+    searcher = TestSearchStage(
+        indexer.client, indexer.collection_name, top_k=search_cfg.top_k, seed=cfg.run.seed
+    )
+    search_results = searcher.run(valid_data, num_queries=search_cfg.num_test_queries)
 
     # 5. Экспорт артефактов
     stats = {
-        "input_embeddings": len(data),
-        "uploaded_points": uploaded_count
+        "total_input_lines": total_lines,
+        "valid_embeddings": len(valid_data),
+        "dropped_embeddings": total_lines - len(valid_data),
+        "actual_uploaded_points": actual_uploaded_count
     }
     exporter = VectorStoreExportStage(cfg.model_dump())
     output_files = exporter.run(validation_result, search_results, stats, cfg.run.name)
 
     result = {
         "run_id": cfg.run.name,
-        "input_count": len(data),
-        "uploaded_count": uploaded_count,
+        "input_count": total_lines,
+        "valid_count": len(valid_data),
+        "uploaded_count": actual_uploaded_count,
         "validation": validation_result,
         "search_tests": len(search_results),
         "output_files": {k: str(v) for k, v in output_files.items()}
