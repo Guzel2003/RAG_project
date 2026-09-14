@@ -25,3 +25,5 @@ search:
 
 logging:
   level: INFO
+
+recreate_collection: true
