@@ -16,7 +16,9 @@ Production-ready пайплайн подготовки данных для RAG-�
 - Векторное хранилище Qdrant в local mode (без Docker)
 - Полная трассируемость данных (lineage metadata)
 - Строгая валидация на каждом этапе
-
+- Интеграция с LLM (OpenRouter) для генерации ответов
+- Автоматическое тестирование на 5 вопросах с оценкой качества
+  
 ### Что входит в репозиторий
 
 В репозиторий включены:
@@ -54,6 +56,8 @@ RAG_project/
 │   │    ├── validation.json
 │   └── qdrant_storage/         # Данные Qdrant
 ├── logs/                       # Логи выполнения
+├── results/                    # Результаты тестирования RAG
+│   └── rag_test_results.json   # Отчет по 5 вопросам
 ├── src/
 │   └── rag_prep/               # Основной пакет
 │       ├── __init__.py         # Инициализация пакета
@@ -80,6 +84,7 @@ RAG_project/
 │       ├── models_vector_store.py # Модели этапа 4
 │       ├── pipeline_vector_store.py # Пайплайн этапа 4
 │       │
+│       ├── rag_chain.py        # Логика RAG (Context Builder + LLM)
 │       ├── stages/             # Этапы подготовки (этап 1)
 │       │   ├── __init__.py
 │       │   ├── loading.py      # Загрузка файлов
@@ -113,6 +118,7 @@ RAG_project/
 │           ├── searching.py    # Тестовый поиск
 │           └── exporting.py    # Экспорт артефактов
 │
+├── python test_rag_questions.py # Тестирование на 5 вопросах с автоматической оценкой
 ├── .gitignore
 ├── pyproject.toml              # Описание пакета
 ├── requirements.txt            # Зависимости
@@ -132,6 +138,11 @@ Python 3.12+
 Windows 10/11 или Linux/macOS
 ~2 ГБ свободного места для моделей и данных
 
+Настройка API ключа
+Создайте файл .env в корне проекта.
+Добавьте ваш ключ OpenRouter:
+       OPENROUTER_API_KEY=sk-or-v1-ваш-ключ
+       
 Установка
   # 1. Установите зависимости
   pip install -r requirements.txt
@@ -228,4 +239,28 @@ data/vector_store/validation.json — результаты валидации и
 data/vector_store/search_results.json — результаты тестового поиска с полной metadata найденных документов
 data/vector_store/manifest.json — снимок конфигурации, статистика запуска и статусы валидации
 data/qdrant_storage/ — данные Qdrant (бинарные файлы)
-      
+
+Запуск RAG и тестирование
+    python test_rag_questions.py
+
+Результаты сохраняются в results/rag_test_results.json.
+
+Модель LLM： model="nvidia/nemotron-3.5-lightning:free"
+
+🧪 Тестирование RAG
+Пайплайн проверен на базе из 10 строительных документов:
+  - Градостроительный кодекс РФ
+  - ГОСТ Р 51872-2019
+  - ГОСТ Р 21.101-2020
+  - СП 48.13330.2019
+  - СП 70.13330.2012
+  - РД-11-02-2006
+  - Приказы Минстроя №1004/пр
+  - №344-пр_исп
+  - №344-пр3
+  - №344-пр4
+
+Типы вопросов:
+✅ 3 вопроса с ответом в документах
+🔍 1 вопрос по конкретному разделу
+❌ 1 вопрос без ответа (проверка на галлюцинации)
