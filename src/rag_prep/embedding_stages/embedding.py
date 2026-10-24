@@ -150,6 +150,7 @@ class EmbeddingStage:
         metadata = {
             "chunk_id": chunk_meta.get("chunk_id", chunk_meta.get("id", "unknown")),
             "document_id": chunk_meta.get("document_id", "unknown"),
+            "file_name": chunk_meta.get("file_name", "unknown_file"),
             "embedding_model": self.model_name,
             "embedding_provider": self.provider,
             "embedding_dimensions": self.dimensions,

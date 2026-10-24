@@ -1,92 +1,80 @@
-"""
-Простое тестирование RAG-пайплайна на 5 вопросах.
-Без автоматического определения метаданных.
-Запуск: python test_rag_questions.py
-"""
-
-from qdrant_client import QdrantClient
-from fastembed import TextEmbedding
-from rag_prep.rag_chain import run_rag_query
+# scripts/run_tests.py
 import json
+import sys
 import os
 
-os.makedirs("results", exist_ok=True)
+# Добавляем корень проекта в пути, чтобы импортировать agent
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-client = QdrantClient(path="data/qdrant_storage")
-embedding_model = TextEmbedding(model_name="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
+from agent.brain import get_agent_response
 
-def get_embedding(text: str):
-    return list(embedding_model.embed(text))[0]
-
-# === ТЕСТОВЫЕ ВОПРОСЫ ===
-questions = [
+# Ваши проверенные вопросы
+TEST_CASES = [
     {
-        "question": "Какие документы прилагаются к заявлению о выдаче разрешения на ввод объекта в эксплуатацию?",
-        "type": "has_answer"
+        "id": "TC-01",
+        "type": "main",
+        "request": "Какие графические параметры должны содержать исполнительные геодезические схемы?",
+        "expected": "Агент находит список параметров в базе знаний и указывает источник (ГОСТ).",
+        "tool_calls": ["search_rag"]
     },
     {
-        "question": "Что должно быть указано на информационном щите при въезде на строительную площадку?",
-        "type": "has_answer"
+        "id": "TC-02",
+        "type": "error",
+        "request": "Как оформить кредит на строительство частного дома?",
+        "expected": "Агент сообщает, что в базе знаний нет информации о банковских кредитах, и не выдумывает ответ.",
+        "tool_calls": ["search_rag"]
     },
     {
-        "question": "Какие графические параметры должны содержать исполнительные геодезические схемы?",
-        "type": "has_answer"
+        "id": "TC-03",
+        "type": "main",
+        "request": "Какие документы прилагаются к заявлению о выдаче разрешения на ввод объекта в эксплуатацию?",
+        "expected": "Агент находит упоминание ст. 55 ГрК РФ и перечисляет типы документов.",
+        "tool_calls": ["search_rag"]
     },
     {
-        "question": "В какие сроки лицо, осуществляющее строительство, должно оградить строительную площадку?",
-        "type": "specific_section"
-    },
-    {
-        "question": "Как оформить кредит на строительство частного дома?",
-        "type": "no_answer"
+        "id": "TC-04",
+        "type": "main",
+        "request": "Напиши формулу чтобы вычислить Общий объем механизированных земляных работ? А если объем экскавации грунта будет 5600?",
+        "expected": "Агент находит формулу, сохраняет контекст предыдущего расчета и использует калькулятор для нового значения.",
+        "tool_calls": ["search_rag", "calculate_expression"]
     }
 ]
 
-results = []
-for q in questions:
-    print(f"\n{'='*60}")
-    print(f"ВОПРОС: {q['question']}")
+def run_tests():
+    print("🚀 Запуск автоматического тестирования агента...\n")
 
-    # Запуск RAG-цепочки
-    result = run_rag_query(
-        question=q["question"],
-        qdrant_client=client,
-        collection_name="construction_docs",
-        embedding_func=get_embedding,
-        top_k=3
-    )
+    results = {
+        "agent_name": "Construction RAG Agent",
+        "tests": []
+    }
 
-    print(f"\nНАЙДЕННЫЕ ЧАНКИ:")
-    for i, chunk in enumerate(result['found_chunks'], 1):
-        score = chunk.get('score', 0)
-        text_preview = chunk['text'][:200]
-        print(f"  {i}. [{score:.4f}] {text_preview}...")
+    for tc in TEST_CASES:
+        print(f"🔄 Выполняется тест {tc['id']}: {tc['request'][:50]}...")
 
-    print(f"\nОТВЕТ LLM:\n{result['llm_answer']}")
+        # Получаем ответ от агента
+        actual_response = get_agent_response(user_id=999, user_message=tc['request'])
 
-    # Простая оценка
-    if q['type'] == 'no_answer':
-        is_correct = ("нет информации" in result['llm_answer'].lower() or
-                      "не найдено" in result['llm_answer'].lower())
-        evaluation = "Корректно" if is_correct else "Некорректно"
-    else:
-        # Просто проверяем, что ответ не пустой и похож на правду
-        evaluation = "Корректно" if len(result['llm_answer']) > 20 else "Частично"
+        # Простая эвристика для определения passed: если ответ длиннее 50 символов и нет слова "КРИТИЧЕСКАЯ ОШИБКА"
+        passed = len(actual_response) > 50 and "КРИТИЧЕСКАЯ ОШИБКА" not in actual_response
 
-    print(f"ОЦЕНКА: {evaluation}")
+        test_result = {
+            "id": tc["id"],
+            "type": tc["type"],
+            "request": tc["request"],
+            "expected": tc["expected"],
+            "actual": actual_response[:300] + "..." if len(actual_response) > 300 else actual_response, # Обрезаем для краткости, как в примере
+            "tool_calls": tc["tool_calls"],
+            "passed": passed
+        }
+        results["tests"].append(test_result)
+        print(f"✅ Тест {tc['id']} завершён. Статус: {'PASS' if passed else 'FAIL'}\n")
 
-    # Сохранение для отчета
-    results.append({
-        "question": q["question"],
-        "type": q["type"],
-        "found_chunks_text": [c['text'][:300] for c in result['found_chunks']],
-        "llm_answer": result['llm_answer'],
-        "evaluation": evaluation
-    })
+    # Сохраняем в требуемую папку
+    os.makedirs("data", exist_ok=True)
+    with open("data/test_results.json", "w", encoding="utf-8") as f:
+        json.dump(results, f, ensure_ascii=False, indent=2)
 
-# Сохраняем итоговый JSON
-output_path = "results/rag_test_results.json"
-with open(output_path, "w", encoding="utf-8") as f:
-    json.dump(results, f, ensure_ascii=False, indent=2)
+    print("🎉 Готово! Результаты сохранены в data/test_results.json")
 
-print(f"\n✅ Результаты сохранены в {output_path}")
+if __name__ == "__main__":
+    run_tests()

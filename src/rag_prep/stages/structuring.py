@@ -137,6 +137,7 @@ class StructuringStage:
         meta = {
             "document_id": element.element_id,
             "source": element.source_file.source,
+            "file_name": element.source_file.file_name,
             "file_type": element.source_file.file_type,
             "section": " / ".join(section_path) if section_path else self.config.default_section,
             "source_hash": element.source_file.source_hash,

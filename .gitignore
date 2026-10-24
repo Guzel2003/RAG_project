@@ -37,4 +37,5 @@ data/raw/
 data/prepared/
 data/chunks/
 data/embeddings/
-data/qdrant_storage/
+
+README.md

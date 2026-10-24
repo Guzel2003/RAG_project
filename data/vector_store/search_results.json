@@ -1,121 +1,126 @@
 [
   {
-    "query_text": "Срок такого согласования не может превышать тридцать дней со дня поступления в уполномоченный исполнительный орган субъекта Российской Федерации проекта решения о комплексном развитии территории жилой застройки, проекта решения о комплексном развитии территории нежилой застройки.\n(в ред. Федерального закона от 08.08.2024 N 232-ФЗ)\n5.",
-    "query_chunk_id": "dc6a85c77de8898d15bfaec0",
+    "query_text": "9 Сварка и контроль качества кольцевых сварных соединений\n\n9.1 Способы сварки и аттестация сварочных технологий\n\nСпособы сварки\n\n9.1.1 Для сварки стыков труб, труб с соединительными деталями трубопроводов и запорно-регулирующей арматурой применяются следующие способы сварки:\n\nручная дуговая сварка покрытыми электродами;\n\nавтоматическая сварка под слоем флюса;\n\nмеханизированная и автоматическая сварка в защитных газах проволокой сплошного сечения и порошковой проволокой;\n\nсварка самозащитной порошковой проволокой;",
+    "query_chunk_id": "989887ff011d0878af4fb416",
     "top_k_results": [
       {
         "score": 1.0,
-        "chunk_id": "dc6a85c77de8898d15bfaec0",
-        "document_id": "056a1e88b0b761c66b3981c7",
-        "text": "Срок такого согласования не может превышать тридцать дней со дня поступления в уполномоченный исполнительный орган субъекта Российской Федерации проекта решения о комплексном развитии территории жилой застройки, проекта решения о комплексном развитии территории нежилой застройки.\n(в ред. Федерального закона от 08.08.2024 N 232-ФЗ)\n5.",
+        "chunk_id": "989887ff011d0878af4fb416",
+        "document_id": "62be75d30ec1d12afc4d223e",
+        "text": "9 Сварка и контроль качества кольцевых сварных соединений\n\n9.1 Способы сварки и аттестация сварочных технологий\n\nСпособы сварки\n\n9.1.1 Для сварки стыков труб, труб с соединительными деталями трубопроводов и запорно-регулирующей арматурой применяются следующие способы сварки:\n\nручная дуговая сварка покрытыми электродами;\n\nавтоматическая сварка под слоем флюса;\n\nмеханизированная и автоматическая сварка в защитных газах проволокой сплошного сечения и порошковой проволокой;\n\nсварка самозащитной порошковой проволокой;",
         "metadata": {
+          "file_name": "СП 86.13330.2014.docx",
           "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
           "embedding_provider": "local",
           "embedding_dimensions": 384,
           "embedding_run_id": "rag_embeddings",
-          "embedded_at": "2026-09-14T20:57:50.276328+00:00",
-          "text_hash": "1d1c97827c2ec087f158bb67046e5dbfcfa120b86761ec8ba83f74b1941d80e1",
-          "embedding_hash": "0e022234f4dc07b393dfcc349e7d2b666f752b8613779a7c95d9f18eaafe518e",
+          "embedded_at": "2026-10-06T18:40:19.399754+00:00",
+          "text_hash": "62fe233425120a1eda6f915844e8c135e7e6353c46a18005cf35e6488d629fdb",
+          "embedding_hash": "f262e3f611fc99d7c4c0e8f650e69bfc04284b71d6d28beca4f6d7ae69e9e3b4",
           "lineage": {
-            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
-            "origin_document_id": "056a1e88b0b761c66b3981c7",
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\СП 86.13330.2014.docx",
+            "origin_document_id": "62be75d30ec1d12afc4d223e",
             "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
           },
-          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\СП 86.13330.2014.docx",
           "section": "full_document",
-          "position": 2978
+          "position": 290
         }
       },
       {
-        "score": 0.8901,
-        "chunk_id": "5a4fca52af5dd2df5d8f8ee0",
-        "document_id": "056a1e88b0b761c66b3981c7",
-        "text": "в отношении которой подготовлен проект решения о комплексном развитии территории.\n4. Решение о комплексном развитии территории жилой застройки принимается в срок не более чем тридцать дней со дня окончания срока, установленного нормативным правовым актом субъекта Российской Федерации для проведения общих собраний собственников помещений в многоквартирных домах, предусмотренных пунктом 2 части 2 статьи 65 настоящего Кодекса.\n5.",
+        "score": 0.8183,
+        "chunk_id": "2dbba56dcf255784d019a94b",
+        "document_id": "62be75d30ec1d12afc4d223e",
+        "text": "Сварка поворотных стыков на трубосварочных базах по различным технологиям\n\n9.2.5 При изготовлении трубных секций на трубосварочных базах применяются следующие способы сварки:\n\nавтоматическая сварка под флюсом;\n\nмеханизированная сварка в защитных газах (сварка корневого слоя);\n\nавтоматическая сварка в защитных газах;\n\nручная дуговая сварка покрытыми электродами (подварка, сварка корневого слоя);\n\nавтоматическая стыковая контактная сварка оплавлением;\n\nкомбинации указанных выше способов сварки.\n\n(Измененная редакция, Изм. N 1).",
         "metadata": {
+          "file_name": "СП 86.13330.2014.docx",
           "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
           "embedding_provider": "local",
           "embedding_dimensions": 384,
           "embedding_run_id": "rag_embeddings",
-          "embedded_at": "2026-09-14T20:58:02.563430+00:00",
-          "text_hash": "7eab4fa7be33207333fcd39a99cee2fa86de17a55f977e63bd18934bb63207b1",
-          "embedding_hash": "9833bb455bffca177a354b9ada7cf9e2204d6ddf29cc23a23d80af492184c9a6",
+          "embedded_at": "2026-10-06T18:40:19.400754+00:00",
+          "text_hash": "40a62f821d04da96f5744e804fbcc3abcf62013f330159122012701448d66c5e",
+          "embedding_hash": "7b25931e7394600cb9fe2544a0efe53e86c78f396f5f24a3be4fb86a20794feb",
           "lineage": {
-            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
-            "origin_document_id": "056a1e88b0b761c66b3981c7",
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\СП 86.13330.2014.docx",
+            "origin_document_id": "62be75d30ec1d12afc4d223e",
             "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
           },
-          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\СП 86.13330.2014.docx",
           "section": "full_document",
-          "position": 3024
+          "position": 309
         }
       },
       {
-        "score": 0.881,
-        "chunk_id": "e5d2eaebb61cf1e9a7aabaf3",
-        "document_id": "056a1e88b0b761c66b3981c7",
-        "text": "Решение о комплексном развитии территории, указанное в пункте 1 части 2 настоящей статьи, подлежит согласованию с субъектом Российской Федерации, в границах которого расположена территория, подлежащая комплексному развитию, в порядке, установленном Правительством Российской Федерации. Срок указанного согласования не может превышать тридцать дней со дня направления в высший исполнительный орган субъекта Российской Федерации предложения о согласовании этого решения.\n(в ред. Федерального закона от 08.08.2024 N 232-ФЗ)\n3.1.",
+        "score": 0.8103,
+        "chunk_id": "dc99d137a28ca23a8c2e7e4c",
+        "document_id": "62be75d30ec1d12afc4d223e",
+        "text": "9.7.11 Повторный ремонт одного и того же дефектного участка сварного стыка с применением сварки не допускается, стык подлежит вырезке.\n\n9.8 Требования к сварочным материалам\n\n9.8.1 Для сварки применяются следующие сварочные материалы:\n\nэлектроды с основным и целлюлозным видами покрытия для ручной дуговой сварки;\n\nфлюсы плавленые и агломерированные для автоматической сварки поворотных стыков;\n\nсварочные проволоки сплошного сечения для автоматической и механизированной сварки в среде защитных газов и автоматической сварки под флюсом;",
         "metadata": {
+          "file_name": "СП 86.13330.2014.docx",
           "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
           "embedding_provider": "local",
           "embedding_dimensions": 384,
           "embedding_run_id": "rag_embeddings",
-          "embedded_at": "2026-09-14T20:57:50.276328+00:00",
-          "text_hash": "b8fc51094ad8b73355e581613f0be83fc38927643b0dccc117cbb5c32ab6f0e9",
-          "embedding_hash": "9043dae188b8b9ec80f6972bf103cf81793b3cd2eaf95eb6614f701301941601",
+          "embedded_at": "2026-10-06T18:40:31.142061+00:00",
+          "text_hash": "1e44aa9ff6a1f6962beab04486b7871d4aecf1a22c2b4c7f3e9279a29cf6d996",
+          "embedding_hash": "d87201d8d7cc2804c6ed9411ffe3e3b6c1650ffa3db8d177164de57a6ef267b7",
           "lineage": {
-            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
-            "origin_document_id": "056a1e88b0b761c66b3981c7",
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\СП 86.13330.2014.docx",
+            "origin_document_id": "62be75d30ec1d12afc4d223e",
             "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
           },
-          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\СП 86.13330.2014.docx",
           "section": "full_document",
-          "position": 2974
+          "position": 371
         }
       },
       {
-        "score": 0.8784,
-        "chunk_id": "93f970238c8b94b71646e7fa",
-        "document_id": "056a1e88b0b761c66b3981c7",
-        "text": "(часть 5 в ред. Федерального закона от 20.03.2011 N 41-ФЗ)\n6. Максимальный срок рассмотрения проекта схемы территориального планирования Российской Федерации и подготовки заключений на такой проект органами местного самоуправления не может превышать тридцать дней со дня получения уведомления, указанного в части 2 настоящей статьи. При непоступлении заключений органов местного самоуправления в установленный срок проект схемы территориального планирования Российской Федерации считается согласованным с этими органами.\n(в ред.",
+        "score": 0.7872,
+        "chunk_id": "b03a0c80ed01514fe8f1a85e",
+        "document_id": "62be75d30ec1d12afc4d223e",
+        "text": "9.1.14 Для сварки применяют самозащитные порошковые проволоки для механизированной и автоматической сварки, аттестованные в соответствии с 9.8 настоящего свода правил.\n\nАвтоматическая стыковая контактная сварка оплавлением\n\n9.1.15 Стыковая контактная сварка оплавлением применяется для сварки труб в секции на стационарных трубосварочных базах, а также для сварки труб или секций в непрерывную нитку с применением передвижных установок.",
         "metadata": {
+          "file_name": "СП 86.13330.2014.docx",
           "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
           "embedding_provider": "local",
           "embedding_dimensions": 384,
           "embedding_run_id": "rag_embeddings",
-          "embedded_at": "2026-09-14T20:48:53.641226+00:00",
-          "text_hash": "85086e806c37109f951f419d13a39c9ea49137cc3d3fa625841290516102ee11",
-          "embedding_hash": "7fc809602e544b5bf109def0b333776ef823a9c6cb89b2f052eef628a27fc3de",
+          "embedded_at": "2026-10-06T18:40:19.399754+00:00",
+          "text_hash": "ba8ebc619340346a1c87cdc278de0e285826ab109178aab653b086995f7ee805",
+          "embedding_hash": "43ccfd829f8da0cdcae082d900459c2f86abd1f44e4b0b7c886ebc73ab16d643",
           "lineage": {
-            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
-            "origin_document_id": "056a1e88b0b761c66b3981c7",
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\СП 86.13330.2014.docx",
+            "origin_document_id": "62be75d30ec1d12afc4d223e",
             "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
           },
-          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\СП 86.13330.2014.docx",
           "section": "full_document",
-          "position": 375
+          "position": 300
         }
       },
       {
-        "score": 0.8365,
-        "chunk_id": "5fc3a23e8ccc383339f62df5",
-        "document_id": "056a1e88b0b761c66b3981c7",
-        "text": "(в ред. Федерального закона от 08.08.2024 N 232-ФЗ)\n8. В случае поступления от одного или нескольких субъектов Российской Федерации сводных заключений, содержащих положения о несогласии с проектом схемы территориального планирования Российской Федерации с обоснованием принятого решения, в течение пятнадцати дней со дня истечения установленного срока согласования такого проекта принимается решение о создании согласительной комиссии. Максимальный срок работы согласительной комиссии не может превышать два месяца.\n(в ред. Федерального закона от 31.07.2020 N 264-ФЗ)\n9.",
+        "score": 0.7827,
+        "chunk_id": "b925b94668643d3893feab08",
+        "document_id": "62be75d30ec1d12afc4d223e",
+        "text": "Автоматическая сварка под слоем флюса\n\n9.1.4 Двухсторонняя автоматическая сварка под флюсом поворотных стыков труб на трубосварочных базах, обеспечивающих полную механизацию сборочно-сварочных и транспортных операций, применяется для изготовления трубных секций, в том числе из труб с заводской изоляцией при условии сохранности изоляции.\n\n9.1.5 При подготовке к сварке производится механическая обработка торцов труб полевыми станками, входящими в состав оборудования трубосварочной базы.\n\n9.1.6 Сварку стыка следует производить в следующем порядке:",
         "metadata": {
+          "file_name": "СП 86.13330.2014.docx",
           "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
           "embedding_provider": "local",
           "embedding_dimensions": 384,
           "embedding_run_id": "rag_embeddings",
-          "embedded_at": "2026-09-14T20:48:53.641226+00:00",
-          "text_hash": "8c3db94fd0b6d5168db3166a21068df72bc4590e8bcba3c553c84c22aa1e2e67",
-          "embedding_hash": "5b265fe693bf5d64cbc1e51634a6a08dcca3ccb425d774426c3d52afc4c92f9a",
+          "embedded_at": "2026-10-06T18:40:19.399754+00:00",
+          "text_hash": "233190a3036a70590b43fc92815f0906c0a6658d3f937bcacb0b5094ac2df30a",
+          "embedding_hash": "50b519531f2ff33541db1874b0399043da2bb85eeedabe3da513962744e42d2e",
           "lineage": {
-            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
-            "origin_document_id": "056a1e88b0b761c66b3981c7",
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\СП 86.13330.2014.docx",
+            "origin_document_id": "62be75d30ec1d12afc4d223e",
             "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
           },
-          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\СП 86.13330.2014.docx",
           "section": "full_document",
-          "position": 377
+          "position": 294
         }
       }
     ],
@@ -123,122 +128,127 @@
     "is_relevant_in_top_k": true
   },
   {
-    "query_text": "После размещения на официальном сайте Министерства в сети Интернет новой xml-схемы для соответствующего документа в течение трех месяцев со дня введения ее в действие обеспечивается доступ к xml-схеме, прекратившей свое действие.\n\n5. В случае если на официальном сайте Министерства в сети Интернет отсутствует xml-схема, подлежащая использованию для формирования исполнительной документации в форме электронных документов, исполнительная документация в форме электронных документов представляется в следующих форматах:\n\nа) doc, docx, odt - для документов с текстовым содержанием, не включающим формулы;",
-    "query_chunk_id": "4847568a3c816c880adaedb7",
+    "query_text": "N 123-ФЗ (с изменениями на 13 июля 2015 г.)\n(в ред. Изменения N 1, утв. Приказом Минстроя России от 16.12.2016 N 983/пр)\n [10] ПБ 10-382-00 Правила устройства и безопасной эксплуатации грузоподъемных кранов\n [11] СНиП 12-03-2001 Безопасность труда в строительстве. Часть 1. Общие требования\n [12] СНиП 12-04-2002 Безопасность труда в строительстве. Часть 2. Строительное производство\n [13] МДС 53-1.2001 Рекомендации по монтажу стальных строительных конструкций.",
+    "query_chunk_id": "b3a8c4759a7a8c8ca16034fb",
     "top_k_results": [
       {
         "score": 1.0,
-        "chunk_id": "4847568a3c816c880adaedb7",
-        "document_id": "69c4389c629ff4f8d0d4b1ba",
-        "text": "После размещения на официальном сайте Министерства в сети Интернет новой xml-схемы для соответствующего документа в течение трех месяцев со дня введения ее в действие обеспечивается доступ к xml-схеме, прекратившей свое действие.\n\n5. В случае если на официальном сайте Министерства в сети Интернет отсутствует xml-схема, подлежащая использованию для формирования исполнительной документации в форме электронных документов, исполнительная документация в форме электронных документов представляется в следующих форматах:\n\nа) doc, docx, odt - для документов с текстовым содержанием, не включающим формулы;",
+        "chunk_id": "b3a8c4759a7a8c8ca16034fb",
+        "document_id": "b57b2ddf5e32bd5a3ecd7bdf",
+        "text": "N 123-ФЗ (с изменениями на 13 июля 2015 г.)\n(в ред. Изменения N 1, утв. Приказом Минстроя России от 16.12.2016 N 983/пр)\n [10] ПБ 10-382-00 Правила устройства и безопасной эксплуатации грузоподъемных кранов\n [11] СНиП 12-03-2001 Безопасность труда в строительстве. Часть 1. Общие требования\n [12] СНиП 12-04-2002 Безопасность труда в строительстве. Часть 2. Строительное производство\n [13] МДС 53-1.2001 Рекомендации по монтажу стальных строительных конструкций.",
         "metadata": {
+          "file_name": "sp-70-13330-2012-svod-pravil.txt",
           "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
           "embedding_provider": "local",
           "embedding_dimensions": 384,
           "embedding_run_id": "rag_embeddings",
-          "embedded_at": "2026-09-14T20:43:23.927017+00:00",
-          "text_hash": "1e5d1f1d542244c6da48d137f7b1a388b5c485cb85ab8fb48d0766b93cb4dcb4",
-          "embedding_hash": "54671ed5c608654a1ad9688b4ada490abe70c13c838bbb4f41f557b123fc0c02",
+          "embedded_at": "2026-10-06T18:13:49.315174+00:00",
+          "text_hash": "10c6fa3fe5cafb11f50b0af9dbd3284029d4a75320d38b82c62f34759e4a75f5",
+          "embedding_hash": "8a3982f1bc3dc7ec25056fcc466fe5cf5e0d43c3d13876412fe1a02941deb918",
           "lineage": {
-            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\prikaz_344pr_isp_doc.docx",
-            "origin_document_id": "69c4389c629ff4f8d0d4b1ba",
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\sp-70-13330-2012-svod-pravil.txt",
+            "origin_document_id": "b57b2ddf5e32bd5a3ecd7bdf",
             "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
           },
-          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\prikaz_344pr_isp_doc.docx",
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\sp-70-13330-2012-svod-pravil.txt",
           "section": "full_document",
-          "position": 46
+          "position": 1200
         }
       },
       {
-        "score": 0.8411,
-        "chunk_id": "211ab5a4b4914692796f9186",
-        "document_id": "69c4389c629ff4f8d0d4b1ba",
-        "text": "Исполнительная документация в форме электронных документов формируется и представляется в виде файлов в формате xml (за исключением случая, установленного пунктом 5 настоящего Порядка).\n\nСхемы, подлежащие использованию для формирования документов в формате xml (далее - xml-схемы), размещаются на официальном сайте Министерства строительства и жилищно-коммунального хозяйства Российской Федерации (далее - Министерство) в информационно-телекоммуникационной сети \"Интернет\" (далее - сеть Интернет) и вводятся в действие по истечении трех месяцев со дня размещения.",
+        "score": 0.8882,
+        "chunk_id": "2a92bf030f7c55252174f50a",
+        "document_id": "6a2d72a258e20ad081bf7fcb",
+        "text": "СНиП 12-03-2001 \"Безопасность труда в строительстве. Часть 1. Общие требования\"ЧАСТЬ 1. ОБЩИЕ ТРЕБОВАНИЯ",
         "metadata": {
+          "file_name": "СНиП 12-03.2001.docx",
           "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
           "embedding_provider": "local",
           "embedding_dimensions": 384,
           "embedding_run_id": "rag_embeddings",
-          "embedded_at": "2026-09-14T20:43:23.927017+00:00",
-          "text_hash": "73fd55e38caadb11f35c77e03142559b37af8f14d2ca32250c262f402e286c6e",
-          "embedding_hash": "f6753a2d4dcb8d6b3dc035cc4cd4382cf2e5f4c2c29a2423d99fbfedc046534f",
+          "embedded_at": "2026-10-06T18:29:59.746081+00:00",
+          "text_hash": "a077f5c2094bb6be4057f37dcf17495c887d84d9c1f7ebe5d0324800cf0b5d65",
+          "embedding_hash": "75731ab6eea3ed66fa64f61ff19de6c6f316c1c5b0434c402ac54fbe0882fa63",
           "lineage": {
-            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\prikaz_344pr_isp_doc.docx",
-            "origin_document_id": "69c4389c629ff4f8d0d4b1ba",
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\СНиП 12-03.2001.docx",
+            "origin_document_id": "6a2d72a258e20ad081bf7fcb",
             "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
           },
-          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\prikaz_344pr_isp_doc.docx",
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\СНиП 12-03.2001.docx",
           "section": "full_document",
-          "position": 45
+          "position": 0
         }
       },
       {
-        "score": 0.6452,
-        "chunk_id": "f069889769ab4f74b0be6591",
-        "document_id": "056a1e88b0b761c66b3981c7",
-        "text": "предусмотренные частями 1, 2 и 4 настоящей статьи, изменения, внесенные в эти документы, решения, принятые постоянно действующим коллегиальным органом управления саморегулируемой организации, в срок не позднее чем через три рабочих дня со дня их принятия подлежат размещению на сайте этой саморегулируемой организации в сети \"Интернет\" и направлению (за исключением решений,",
+        "score": 0.8759,
+        "chunk_id": "96f67bee9dc54890f26de7e6",
+        "document_id": "13458988fc7895011201bc4d",
+        "text": "[11] СНиП 12-03-2001 Безопасность труда в строительстве. Часть 1. Общие требования\n\n[12] СНиП 12-04-2002 Безопасность труда в строительстве. Часть 2. Строительное производство\n\n[13] МДС 53-1.2001 Рекомендации по монтажу стальных строительных конструкций\n\nБиблиография (Измененная редакция, Изм. N 1).\n\n_____________________________________________________________________________________\n     УДК 692 (083.74)                    ОКС 91.080.10; 91.080.20; 91.180.30; 91.080.40",
         "metadata": {
+          "file_name": "СП 70.13330.2012.docx",
           "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
           "embedding_provider": "local",
           "embedding_dimensions": 384,
           "embedding_run_id": "rag_embeddings",
-          "embedded_at": "2026-09-14T20:54:55.592370+00:00",
-          "text_hash": "6846f55aa0fc59390ba44aa3518ba8ac1ab87abb97361f8d100a08acf2d34a56",
-          "embedding_hash": "b9589a699cad46eb211dfc7606ccfdc8813b7d51648fc51f581b9dad7d781119",
+          "embedded_at": "2026-10-06T18:37:20.636589+00:00",
+          "text_hash": "8abd1c0d7d6647eda63be6ab786b859f816fc84c7c5b77d604356f016b63aef1",
+          "embedding_hash": "b68c2dde1f9a9ccce72a9322530064c80799d384048dbc7362083f5763b00662",
           "lineage": {
-            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
-            "origin_document_id": "056a1e88b0b761c66b3981c7",
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\СП 70.13330.2012.docx",
+            "origin_document_id": "13458988fc7895011201bc4d",
             "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
           },
-          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\СП 70.13330.2012.docx",
           "section": "full_document",
-          "position": 2038
+          "position": 754
         }
       },
       {
-        "score": 0.6132,
-        "chunk_id": "e819a49acd0150224f558703",
-        "document_id": "69c4389c629ff4f8d0d4b1ba",
-        "text": "4. Исполнительная документация в форме электронных документов подписывается лицами, указанными в пункте 3 настоящего Порядка, усиленной неквалифицированной электронной подписью, сертификат ключа проверки которой создан и используется в инфраструктуре, обеспечивающей информационно-технологическое взаимодействие информационных систем, используемых для предоставления государственных и муниципальных услуг в электронной форме, в порядке, установленном Правилами создания и использования сертификата ключа проверки усиленной неквалифицированной электронной подписи в инфраструктуре,",
+        "score": 0.8705,
+        "chunk_id": "114965e4788747f0b24d5935",
+        "document_id": "8d486e7718878cff3b01ecf8",
+        "text": "СНиП 12 -03-2001. Безопасность труда в строительстве. Ч. 1. Общие требования / Госстрой России – М., 2001. – 48 с.\n\nСНиП 12 -04-2002. Безопасность труда в строительстве. Ч. 2. Строи-тельное производство / Госстрой России – М., 2003. – 35 с.\n\nГОСТ Р 21.1101-2009. Система проектной документации для строи-тельства. Основные требования к проектной и рабочей документации / Рос-стандарт. – М.: Стандартинформ, 2010. – 54 с.\n\nУчебное издание",
         "metadata": {
+          "file_name": "ПРОЕКТИРОВАНИЕ ТЕХНОЛОГИЧЕСКИХ ПРОЦЕССОВ.docx",
           "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
           "embedding_provider": "local",
           "embedding_dimensions": 384,
           "embedding_run_id": "rag_embeddings",
-          "embedded_at": "2026-09-14T20:43:23.927017+00:00",
-          "text_hash": "7108dc47bbed9f14cb8af38d5019d025e374fe2ac93b58b6d4e3615010e02c1d",
-          "embedding_hash": "560fd01c44dd454bc7d7fcd2be1b0757889a5b7da3a1050a4f2ab749a8e8d882",
+          "embedded_at": "2026-10-06T18:27:50.780216+00:00",
+          "text_hash": "a4e80c55939175bfa1d40c6093c9c2dd55d1a390224db0d6cdbb33bba3b1ff8a",
+          "embedding_hash": "5b492edd2d374fb613e1cf8ba15c4b02f2cc61dfa6dcd734bb60b5c7febee9c1",
           "lineage": {
-            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\prikaz_344pr_isp_doc.docx",
-            "origin_document_id": "69c4389c629ff4f8d0d4b1ba",
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\ПРОЕКТИРОВАНИЕ ТЕХНОЛОГИЧЕСКИХ ПРОЦЕССОВ.docx",
+            "origin_document_id": "8d486e7718878cff3b01ecf8",
             "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
           },
-          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\prikaz_344pr_isp_doc.docx",
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\ПРОЕКТИРОВАНИЕ ТЕХНОЛОГИЧЕСКИХ ПРОЦЕССОВ.docx",
           "section": "full_document",
-          "position": 43
+          "position": 205
         }
       },
       {
-        "score": 0.5927,
-        "chunk_id": "73f184bb77b55e5266c77e0a",
-        "document_id": "056a1e88b0b761c66b3981c7",
-        "text": "КонсультантПлюс: примечание.\nС 01.09.2026 в ч. 4.1 ст. 55 вносятся изменения (ФЗ от 31.07.2025 N 304-ФЗ). См. будущую редакцию.\n4.1. Для получения разрешения на ввод объекта в эксплуатацию разрешается требовать только указанные в частях 3 и 4 настоящей статьи документы. Документы, предусмотренные частями 3 и 4 настоящей статьи, могут быть направлены в электронной форме.",
+        "score": 0.8688,
+        "chunk_id": "063397d9ad3cfbd2def80376",
+        "document_id": "13458988fc7895011201bc4d",
+        "text": "[10] ПБ 10-382-00 Правила устройства и безопасной эксплуатации грузоподъемных кранов\n________________\n      На территории Российской Федерации документ не действует. Следует руководствоваться Федеральными нормами и правилами в области промышленной безопасности \"Правила безопасности опасных производственных объектов, на которых используются подъемные сооружения\", утвержденными приказом Ростехнадзора от 12.11.2013 N 533. - Примечание изготовителя базы данных.\n\n[11] СНиП 12-03-2001 Безопасность труда в строительстве. Часть 1. Общие требования",
         "metadata": {
+          "file_name": "СП 70.13330.2012.docx",
           "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
           "embedding_provider": "local",
           "embedding_dimensions": 384,
           "embedding_run_id": "rag_embeddings",
-          "embedded_at": "2026-09-14T20:54:13.146542+00:00",
-          "text_hash": "0c56cbc9977903ce653b7c3e988e399261a2ac0ffa423b3b5ca2f94a57d9de13",
-          "embedding_hash": "da179c8494a20dbe26ae1e4d1433e96a2ce0b132618de23460e46f03bbc4c062",
+          "embedded_at": "2026-10-06T18:37:20.636589+00:00",
+          "text_hash": "46656d71615857a88c56a0a71c8c13348dfa8290656f93c474f58a64e960bff8",
+          "embedding_hash": "052ce416289b9e7d04cabdca87c70b20da222cdd285df65fa389a7403be02883",
           "lineage": {
-            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
-            "origin_document_id": "056a1e88b0b761c66b3981c7",
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\СП 70.13330.2012.docx",
+            "origin_document_id": "13458988fc7895011201bc4d",
             "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
           },
-          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\Градостроительный кодекс Российской Федерации  от 29.12.2004.txt",
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\СП 70.13330.2012.docx",
           "section": "full_document",
-          "position": 1889
+          "position": 753
         }
       }
     ],
@@ -246,122 +256,127 @@
     "is_relevant_in_top_k": true
   },
   {
-    "query_text": "- в графе 17 - порядковый номер листа разрешения. Если разрешение состоит из одного листа, графу не заполняют;\n\n- в графе 18 - общее количество листов разрешения.\n\nВНЕСЕНИЕ ИЗМЕНЕНИЙ РУКОПИСНЫМ СПОСОБОМ\n\nМ.1 Внесение изменений зачеркиванием размеров, знаков, надписей, отдельных слов и строк осуществляют сплошной тонкой линией с проставлением новой информации в непосредственной близости от зачеркнутой.",
-    "query_chunk_id": "78ede988e068eb94cefde19e",
+    "query_text": "подтверждающего полномочия) | (должность (при наличии), фамилия, инициалы, идентификационный номер в национальном реестре специалистов в области строительства (за исключением случаев, когда членство в саморегулируемых организациях в области строительства, реконструкции, капитального ремонта объектов капитального строительства не требуется), реквизиты распорядительного документа, подтверждающего полномочия)\nПредставитель лица, осуществляющего подготовку проектной документации (в случае привлечения застройщиком лица, осуществляющего подготовку проектной документации,",
+    "query_chunk_id": "bc90d8c850a5b36d6a393b44",
     "top_k_results": [
       {
         "score": 1.0,
-        "chunk_id": "78ede988e068eb94cefde19e",
-        "document_id": "d3c3d95f0527f35a309a728d",
-        "text": "- в графе 17 - порядковый номер листа разрешения. Если разрешение состоит из одного листа, графу не заполняют;\n\n- в графе 18 - общее количество листов разрешения.\n\nВНЕСЕНИЕ ИЗМЕНЕНИЙ РУКОПИСНЫМ СПОСОБОМ\n\nМ.1 Внесение изменений зачеркиванием размеров, знаков, надписей, отдельных слов и строк осуществляют сплошной тонкой линией с проставлением новой информации в непосредственной близости от зачеркнутой.",
+        "chunk_id": "bc90d8c850a5b36d6a393b44",
+        "document_id": "f88f05c18a017fa4a8d273f8",
+        "text": "подтверждающего полномочия) | (должность (при наличии), фамилия, инициалы, идентификационный номер в национальном реестре специалистов в области строительства (за исключением случаев, когда членство в саморегулируемых организациях в области строительства, реконструкции, капитального ремонта объектов капитального строительства не требуется), реквизиты распорядительного документа, подтверждающего полномочия)\nПредставитель лица, осуществляющего подготовку проектной документации (в случае привлечения застройщиком лица, осуществляющего подготовку проектной документации,",
         "metadata": {
+          "file_name": "order-344pr-app4-critical-structures-act-final-v1-20260817.docx",
           "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
           "embedding_provider": "local",
           "embedding_dimensions": 384,
           "embedding_run_id": "rag_embeddings",
-          "embedded_at": "2026-09-14T20:41:18.374656+00:00",
-          "text_hash": "69dc1e05746507d32e1151f4c34790ab7eca710891cc8bc61faca34a55b677e2",
-          "embedding_hash": "60951e7421f516adcf105da103ee6fbe16666a04590cd6dcf001a0f67aecb9c6",
+          "embedded_at": "2026-10-06T18:09:10.652759+00:00",
+          "text_hash": "18f73ea4b10bd5bdf1516d1c0d71e55625bc6c74cc62337194ec4f785be823ad",
+          "embedding_hash": "eb675ec1ea5137df254d2837e72aaf0390433c039b693419b70157bdcf93557d",
           "lineage": {
-            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\gost_r_21_101.docx",
-            "origin_document_id": "d3c3d95f0527f35a309a728d",
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\order-344pr-app4-critical-structures-act-final-v1-20260817.docx",
+            "origin_document_id": "f88f05c18a017fa4a8d273f8",
             "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
           },
-          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\gost_r_21_101.docx",
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\order-344pr-app4-critical-structures-act-final-v1-20260817.docx",
           "section": "full_document",
-          "position": 204
+          "position": 146
         }
       },
       {
-        "score": 0.8162,
-        "chunk_id": "ea5746e1bff7285153e8c2af",
-        "document_id": "d3c3d95f0527f35a309a728d",
-        "text": "Л.2 В графах разрешения указывают:\n\n- в графе 1 - обозначение разрешения, состоящее из порядкового номера разрешения по журналу регистрации разрешений по ГОСТ Р 21.1003 и через разделительный знак (дефис, наклонную черту и т.п.) - двух последних цифр года выпуска разрешения.\n\nПример - 15-12; 15/12;\n\n- в графе 2 - обозначение документа, в который вносят изменение. При выпуске общего разрешения на внесение изменений в несколько документов приводят обозначения всех документов, при этом для второго и последующих документов базовую часть обозначения допускается не указывать, например 2345-12-АР; КЖ; ОВ;",
+        "score": 1.0,
+        "chunk_id": "c074fb6c7f8ec9cd6ca6dfd6",
+        "document_id": "2161ba2d27880a7746763b8e",
+        "text": "подтверждающего полномочия) | (должность (при наличии), фамилия, инициалы, идентификационный номер в национальном реестре специалистов в области строительства (за исключением случаев, когда членство в саморегулируемых организациях в области строительства, реконструкции, капитального ремонта объектов капитального строительства не требуется), реквизиты распорядительного документа, подтверждающего полномочия)\nПредставитель лица, осуществляющего подготовку проектной документации (в случае привлечения застройщиком лица, осуществляющего подготовку проектной документации,",
         "metadata": {
+          "file_name": "order-344pr-app3-aosr-final-v1-20260817.docx",
           "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
           "embedding_provider": "local",
           "embedding_dimensions": 384,
           "embedding_run_id": "rag_embeddings",
-          "embedded_at": "2026-09-14T20:41:18.374656+00:00",
-          "text_hash": "44808946e412824f63d024a46ba3588efc627d7705a9211fcc433539b1c5ce55",
-          "embedding_hash": "02cede6971d4f23e577e50a0da3747b81db1bbc4524e0891278a3c0055a1968f",
+          "embedded_at": "2026-10-06T18:08:25.041251+00:00",
+          "text_hash": "18f73ea4b10bd5bdf1516d1c0d71e55625bc6c74cc62337194ec4f785be823ad",
+          "embedding_hash": "eb675ec1ea5137df254d2837e72aaf0390433c039b693419b70157bdcf93557d",
           "lineage": {
-            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\gost_r_21_101.docx",
-            "origin_document_id": "d3c3d95f0527f35a309a728d",
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\order-344pr-app3-aosr-final-v1-20260817.docx",
+            "origin_document_id": "2161ba2d27880a7746763b8e",
             "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
           },
-          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\gost_r_21_101.docx",
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\order-344pr-app3-aosr-final-v1-20260817.docx",
           "section": "full_document",
-          "position": 197
+          "position": 139
         }
       },
       {
-        "score": 0.7723,
-        "chunk_id": "ab2f7c7a5c2b88dc61f5f1b0",
-        "document_id": "d3c3d95f0527f35a309a728d",
-        "text": "Л.1 Разрешение на внесение изменений выполняют по форме 9 (первый лист) и по форме 9а (последующие листы).\n\n1 Допускается для последующих листов разрешения использовать форму 9.\n\n2 Допускается дополнять форму графами для идентификации разрешения в электронном виде. Расположение и размеры граф организация-разработчик устанавливает самостоятельно.\n\n3 В графах 11, 16 при указании календарной даты на бумажном носителе год указывают двумя последними цифрами.\n\n4 Подпись лица, принявшего разрешение на хранение, и дату приемки приводят на поле для подшивки без нанесения граф.",
+        "score": 0.9608,
+        "chunk_id": "4171b9b8838069bd6cb613dc",
+        "document_id": "f88f05c18a017fa4a8d273f8",
+        "text": "подтверждающего полномочия) | (должность (при наличии), фамилия, инициалы, идентификационный номер в национальном реестре специалистов в области строительства (за исключением случаев, когда членство в саморегулируемых организациях в области строительства, реконструкции, капитального ремонта объектов капитального строительства не требуется), реквизиты распорядительного документа, подтверждающего полномочия) | (должность (при наличии), фамилия, инициалы, идентификационный номер в национальном реестре специалистов в области строительства (за исключением случаев,",
         "metadata": {
+          "file_name": "order-344pr-app4-critical-structures-act-final-v1-20260817.docx",
           "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
           "embedding_provider": "local",
           "embedding_dimensions": 384,
           "embedding_run_id": "rag_embeddings",
-          "embedded_at": "2026-09-14T20:41:18.374656+00:00",
-          "text_hash": "deae23ac383987c2a1f1561d454364d196b7a02f59bb216c02cf132d2ca805b3",
-          "embedding_hash": "bb28f2011fa87138d62607395e80faea4598601e3b603729f85b557ba5bd0f70",
+          "embedded_at": "2026-10-06T18:09:10.652759+00:00",
+          "text_hash": "6efa81cc03a7cb1e40102892f49fdcf116dc8236a156bab07c927c4efeef5cf9",
+          "embedding_hash": "e6e7f64fe9145c89c1d213edb45022f591c5581a304a8915a8f99e4c4a66f801",
           "lineage": {
-            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\gost_r_21_101.docx",
-            "origin_document_id": "d3c3d95f0527f35a309a728d",
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\order-344pr-app4-critical-structures-act-final-v1-20260817.docx",
+            "origin_document_id": "f88f05c18a017fa4a8d273f8",
             "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
           },
-          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\gost_r_21_101.docx",
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\order-344pr-app4-critical-structures-act-final-v1-20260817.docx",
           "section": "full_document",
-          "position": 196
+          "position": 142
         }
       },
       {
-        "score": 0.7655,
-        "chunk_id": "9eead315aa0434d0ba2f7a9a",
-        "document_id": "d3c3d95f0527f35a309a728d",
-        "text": "- в графе \"Примечание\" - дополнительные сведения, например количество листов и номер изменения документа, включенного в том*.\n\nВ конце содержания приводят общее количество листов документов, включенных в том.\n\nПервый лист содержания тома оформляют основной надписью по форме 5 (приложение Ж), последующие - по форме 6 (приложение Ж). Содержанию присваивают обозначение, состоящее из обозначения тома и через дефис шифра \"С\".\n\nПример - 2345-ПЗУ2-С; 2345-ИОС4.1.2-С.\n\nВ графе 5 основной надписи указывают \"Содержание тома\" и далее - номер соответствующего тома.",
+        "score": 0.9608,
+        "chunk_id": "f0a7b856c3d3d04298908a41",
+        "document_id": "f88f05c18a017fa4a8d273f8",
+        "text": "подтверждающего полномочия) | (должность (при наличии), фамилия, инициалы, идентификационный номер в национальном реестре специалистов в области строительства (за исключением случаев, когда членство в саморегулируемых организациях в области строительства, реконструкции, капитального ремонта объектов капитального строительства не требуется), реквизиты распорядительного документа, подтверждающего полномочия) | (должность (при наличии), фамилия, инициалы, идентификационный номер в национальном реестре специалистов в области строительства (за исключением случаев,",
         "metadata": {
+          "file_name": "order-344pr-app4-critical-structures-act-final-v1-20260817.docx",
           "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
           "embedding_provider": "local",
           "embedding_dimensions": 384,
           "embedding_run_id": "rag_embeddings",
-          "embedded_at": "2026-09-14T20:41:06.802898+00:00",
-          "text_hash": "a88ba11345f142dfe18d57be74ec42e98a279622626f250cf159131620fe8363",
-          "embedding_hash": "66a129335475298bf6a1a1cb60b02ad33987e503a11ac510717ec93614d919d2",
+          "embedded_at": "2026-10-06T18:09:10.652759+00:00",
+          "text_hash": "6efa81cc03a7cb1e40102892f49fdcf116dc8236a156bab07c927c4efeef5cf9",
+          "embedding_hash": "e6e7f64fe9145c89c1d213edb45022f591c5581a304a8915a8f99e4c4a66f801",
           "lineage": {
-            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\gost_r_21_101.docx",
-            "origin_document_id": "d3c3d95f0527f35a309a728d",
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\order-344pr-app4-critical-structures-act-final-v1-20260817.docx",
+            "origin_document_id": "f88f05c18a017fa4a8d273f8",
             "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
           },
-          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\gost_r_21_101.docx",
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\order-344pr-app4-critical-structures-act-final-v1-20260817.docx",
           "section": "full_document",
           "position": 138
         }
       },
       {
-        "score": 0.7489,
-        "chunk_id": "eca470c257fce8bd71d40002",
-        "document_id": "d3c3d95f0527f35a309a728d",
-        "text": "- в графе \"Всего листов (страниц) в док.\" - количество листов (страниц) в текстовом документе после внесения изменений;\n\n- в графе \"Подп.\" - подпись лица, ответственного за правильность внесения изменения;\n\nН.5 При замене всех листов подлинника в таблице регистрации изменений не воспроизводят номера изменений и другие данные, относящиеся ко всем ранее внесенным в документ изменениям.\n\nЖУРНАЛ ИЗМЕНЕНИЙ\n\nП.1 Журнал изменений (далее - журнал) выполняют по форме 11.\n\n1 Журнал выполняют на листах формата A3 по ГОСТ 2.301.\n\n2 Размеры граф журнала определяет организация-пользователь.",
+        "score": 0.9608,
+        "chunk_id": "333d900982873b4027a762a3",
+        "document_id": "2161ba2d27880a7746763b8e",
+        "text": "подтверждающего полномочия) | (должность (при наличии), фамилия, инициалы, идентификационный номер в национальном реестре специалистов в области строительства (за исключением случаев, когда членство в саморегулируемых организациях в области строительства, реконструкции, капитального ремонта объектов капитального строительства не требуется), реквизиты распорядительного документа, подтверждающего полномочия) | (должность (при наличии), фамилия, инициалы, идентификационный номер в национальном реестре специалистов в области строительства (за исключением случаев,",
         "metadata": {
+          "file_name": "order-344pr-app3-aosr-final-v1-20260817.docx",
           "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
           "embedding_provider": "local",
           "embedding_dimensions": 384,
           "embedding_run_id": "rag_embeddings",
-          "embedded_at": "2026-09-14T20:41:18.375657+00:00",
-          "text_hash": "05caa1b20743456391be59539221107746f70e4676dc08df543925d6d2b3e1a1",
-          "embedding_hash": "3abe02b633934d762002ada38b4e95bc6eb2341bbdf8aecc3fb252dc5cf9388d",
+          "embedded_at": "2026-10-06T18:08:25.041251+00:00",
+          "text_hash": "6efa81cc03a7cb1e40102892f49fdcf116dc8236a156bab07c927c4efeef5cf9",
+          "embedding_hash": "e6e7f64fe9145c89c1d213edb45022f591c5581a304a8915a8f99e4c4a66f801",
           "lineage": {
-            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\gost_r_21_101.docx",
-            "origin_document_id": "d3c3d95f0527f35a309a728d",
+            "origin_source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\order-344pr-app3-aosr-final-v1-20260817.docx",
+            "origin_document_id": "2161ba2d27880a7746763b8e",
             "embedding_model_version": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
           },
-          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\gost_r_21_101.docx",
+          "source": "C:\\Users\\parkc\\PycharmProjects\\RAG_project\\data\\raw\\order-344pr-app3-aosr-final-v1-20260817.docx",
           "section": "full_document",
-          "position": 212
+          "position": 135
         }
       }
     ],

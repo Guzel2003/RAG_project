@@ -1,8 +1,8 @@
 {
   "status": "success",
-  "expected_points": 5855,
-  "actual_points": 5855,
-  "actual_uploaded_from_pipeline": 5855,
+  "expected_points": 11357,
+  "actual_points": 11357,
+  "actual_uploaded_from_pipeline": 11357,
   "counts_match": true,
   "expected_dimension": 384,
   "actual_dimension": 384,
@@ -14,5 +14,5 @@
     "document_id_present_in_sample": "10/10",
     "metadata_rich_in_sample": "10/10"
   },
-  "sample_chunk_id": "86479890daf3e2bcc81582cc"
+  "sample_chunk_id": "cbefe3f1cf9a5e8eb3d11922"
 }
