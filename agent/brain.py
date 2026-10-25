@@ -43,12 +43,18 @@ ARGS: {"expression": "5000 + 7656"}
 """
 
 
-def get_agent_response(user_id: int, user_message: str) -> str:
+def get_agent_response(user_id: int, user_message: str) -> dict:
+    """
+    Возвращает словарь с ответом агента и списком реально использованных инструментов.
+    """
     # Добавляем запрос пользователя в память
     memory.add_message(user_id, "user", user_message)
 
     # Ограничиваем количество шагов, чтобы избежать бесконечного цикла
     max_steps = 5
+
+    # Отслеживаем вызовы инструментов
+    tools_called = []
 
     for step in range(max_steps):
         print(f"\n🔄 ШАГ {step + 1}: Отправляю запрос к LLM...")
@@ -76,6 +82,10 @@ def get_agent_response(user_id: int, user_message: str) -> str:
                 args_str = tool_match.group(2).strip()
                 print(f"🔧 Обнаружен вызов инструмента: {tool_name}")
 
+                # Запоминаем вызов инструмента (если еще не был вызван)
+                if tool_name not in tools_called:
+                    tools_called.append(tool_name)
+
                 try:
                     kwargs = json.loads(args_str)
 
@@ -90,9 +100,13 @@ def get_agent_response(user_id: int, user_message: str) -> str:
                     print(f"✅ Результат инструмента: {tool_result}")
 
                     if tool_result.get("status") == "error":
-                        return f"❌ Ошибка инструмента: {tool_result.get('error')}. Проверьте данные или перефразируйте запрос."
+                        # Возвращаем ошибку, но всё равно с списком инструментов
+                        return {
+                            "answer": f"❌ Ошибка инструмента: {tool_result.get('error')}. Проверьте данные или перефразируйте запрос.",
+                            "tools_called": tools_called
+                        }
 
-                    # === ИЗМЕНЕНИЕ ЗДЕСЬ: Формируем четкую инструкцию вместо сырого JSON ===
+                    # === ИЗМЕНЕНИЕ: Записываем результат как "system", а не "user" ===
                     tool_response_text = (
                         f"РЕЗУЛЬТАТ ВЫПОЛНЕНИЯ ИНСТРУМЕНТА '{tool_name}':\n"
                         f"{json.dumps(tool_result, ensure_ascii=False, indent=2)}\n\n"
@@ -103,26 +117,42 @@ def get_agent_response(user_id: int, user_message: str) -> str:
                         f"Однако известно, что...' и приведи те данные, которые есть."
                     )
 
-                    # Добавляем эту инструкцию в память как сообщение от "пользователя" (системы),
-                    # чтобы заставить модель сгенерировать финальный ответ ассистента
-                    memory.add_message(user_id, "user", tool_response_text)
+                    # Добавляем результат как СИСТЕМНОЕ сообщение (не пользовательское!)
+                    memory.add_message(user_id, "system", tool_response_text)
 
                     # Цикл продолжится (step + 1), и LLM получит этот результат!
                     continue
 
                 except json.JSONDecodeError:
-                    return f"❌ Ошибка: не удалось распознать аргументы инструмента. Сырые данные: {args_str}"
+                    return {
+                        "answer": f"❌ Ошибка: не удалось распознать аргументы инструмента. Сырые данные: {args_str}",
+                        "tools_called": tools_called
+                    }
                 except Exception as e:
-                    return f"❌ Ошибка выполнения инструмента: {str(e)}"
+                    return {
+                        "answer": f"❌ Ошибка выполнения инструмента: {str(e)}",
+                        "tools_called": tools_called
+                    }
 
             else:
                 # ЭТО ФИНАЛЬНЫЙ ОТВЕТ! (Нет TOOL_CALL, значит модель закончила думать)
                 print("✅ Финальный ответ сформирован.")
                 memory.add_message(user_id, "assistant", agent_reply)
-                return agent_reply
+
+                # Возвращаем словарь с ответом и списком инструментов
+                return {
+                    "answer": agent_reply,
+                    "tools_called": tools_called
+                }
 
         except Exception as e:
             print(f"❌ КРИТИЧЕСКАЯ ОШИБКА: {type(e).__name__}: {e}")
-            return f"Извините, техническая ошибка: {str(e)}"
+            return {
+                "answer": f"Извините, техническая ошибка: {str(e)}",
+                "tools_called": tools_called
+            }
 
-    return "⚠️ Превышено максимальное количество шагов рассуждения. Попробуйте упростить запрос."
+    return {
+        "answer": "️ Превышено максимальное количество шагов рассуждения. Попробуйте упростить запрос.",
+        "tools_called": tools_called
+    }

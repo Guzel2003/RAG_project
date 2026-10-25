@@ -14,11 +14,10 @@ def chat_with_agent(message, history):
     history: история переписки (Gradio передает её для отображения)
     """
     # Вызываем нашего агента, который уже умеет работать с LLM и памятью
-    response = get_agent_response(DEMO_USER_ID, message)
+    result = get_agent_response(DEMO_USER_ID, message)
 
     # Возвращаем ответ. Gradio сам красиво оформит его в чате.
-    return response
-
+    return result["answer"]
 
 # Создаем интерфейс чата (убрали theme, чтобы избежать ошибок версий)
 demo = gr.ChatInterface(

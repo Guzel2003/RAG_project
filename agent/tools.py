@@ -1,7 +1,8 @@
 # agent/tools.py
 import os
 import sys
-import math
+import ast
+import operator
 import re
 
 # ==========================================
@@ -12,7 +13,7 @@ root_dir = os.path.dirname(current_dir)
 if root_dir not in sys.path:
     sys.path.append(root_dir)
 
-# Импортируем саму функцию запроса из твоего RAG
+# Импортируем саму функцию запроса из RAG
 try:
     from src.rag_prep.rag_chain import run_rag_query
 
@@ -23,26 +24,29 @@ except ImportError as e:
 
 
 # ==========================================
-# 2. ИНИЦИАЛИЗАЦИЯ ЗАВИСИМОСТЕЙ RAG
+# 2. ИНИЦИАЛИЗАЦИЯ ЗАВИСИМОСТЕЙ RAG (FastEmbed)
 # ==========================================
 def get_rag_dependencies():
     """
-    Создает и возвращает qdrant_client, collection_name и embedding_func
-    на основе настроек из твоих config-файлов.
+    Создает и возвращает qdrant_client, collection_name и embedding_func.
+    Используем FastEmbed с той же моделью, что и при индексации базы!
     """
     try:
-        # 1. Инициализация Qdrant (локально, путь из paths.storage_dir)
         from qdrant_client import QdrantClient
+        from fastembed import TextEmbedding
+
+        # 1. Инициализация Qdrant
         qdrant_client = QdrantClient(path="data/qdrant_storage")
 
-        # 2. Инициализация модели эмбеддингов (модель из embedding.model)
-        from sentence_transformers import SentenceTransformer
-        embed_model = SentenceTransformer("sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
+        # 2. Инициализация FastEmbed (ТОЧНО ТА ЖЕ МОДЕЛЬ, ЧТО В ВАШЕМ МАППИНГЕ!)
+        model_name = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+        embed_model = TextEmbedding(model_name)
 
         def embedding_func(text: str):
-            return embed_model.encode(text).tolist()
+            # FastEmbed возвращает генератор. Берем первый элемент и преобразуем в список float
+            return list(embed_model.embed(text))[0].tolist()
 
-        # 3. Имя коллекции (из vector_store.collection_name)
+        # 3. Имя коллекции
         collection_name = "construction_docs"
 
         return qdrant_client, collection_name, embedding_func
@@ -56,16 +60,15 @@ def get_rag_dependencies():
 # ==========================================
 def search_rag(query: str) -> dict:
     """
-    Ищет формулы и нормативы в твоей реальной базе Qdrant.
+    Ищет формулы и нормативы в базе Qdrant.
     """
     if not RAG_AVAILABLE:
         return {"status": "error", "error": "Модуль rag_chain не найден. Проверь пути."}
 
     try:
-        # Получаем живые объекты для работы
         qdrant_client, collection_name, embedding_func = get_rag_dependencies()
 
-        # Вызываем твою функцию поиска
+        # Вызываем обновленную функцию поиска
         result = run_rag_query(
             question=query,
             qdrant_client=qdrant_client,
@@ -74,18 +77,8 @@ def search_rag(query: str) -> dict:
             top_k=3
         )
 
-        # Извлекаем контекст и источники
-        context = result.get("context", "Контекст не найден.")
-        sources = [
-            chunk.get("metadata", {}).get("file_name", "Неизвестный источник")
-            for chunk in result.get("found_chunks", [])
-        ]
-
-        return {
-            "status": "success",
-            "context": context,
-            "sources": list(set(sources))  # Убираем дубликаты
-        }
+        # Просто возвращаем результат
+        return result
 
     except Exception as e:
         return {
@@ -95,25 +88,38 @@ def search_rag(query: str) -> dict:
 
 
 # ==========================================
-# 4. TOOL: КАЛЬКУЛЯТОР ВЫРАЖЕНИЙ
+# 4. TOOL: БЕЗОПАСНЫЙ КАЛЬКУЛЯТОР (Без eval!)
 # ==========================================
 def calculate_expression(expression: str) -> dict:
-    """Безопасно вычисляет математическое выражение."""
+    """
+    Безопасно вычисляет математическое выражение через AST (абстрактное синтаксическое дерево).
+    Полностью исключает использование eval() и выполнение произвольного кода.
+    """
+    # Разрешенные математические операторы
+    allowed_ops = {
+        ast.Add: operator.add, ast.Sub: operator.sub,
+        ast.Mult: operator.mul, ast.Div: operator.truediv,
+        ast.Pow: operator.pow, ast.USub: operator.neg,
+        ast.UAdd: operator.pos
+    }
+
+    def _safe_eval(node):
+        """Рекурсивно вычисляет узлы AST."""
+        if isinstance(node, ast.Constant):  # Для Python 3.8+ (числа)
+            return node.value
+        elif isinstance(node, ast.BinOp):  # Бинарные операции (2 + 2)
+            return allowed_ops[type(node.op)](_safe_eval(node.left), _safe_eval(node.right))
+        elif isinstance(node, ast.UnaryOp):  # Унарные операции (-5)
+            return allowed_ops[type(node.op)](_safe_eval(node.operand))
+        else:
+            raise ValueError("Выражение содержит недопустимые символы или функции")
+
     try:
-        if not re.match(r'^[\d\.\+\-\*\/\(\)\s\w]+$', expression):
-            return {"status": "error", "error": "Выражение содержит недопустимые символы"}
+        # Парсим строку в AST. Если там будет код вроде "import os", парсинг упадет или мы его отсечем
+        tree = ast.parse(expression, mode='eval')
 
-        safe_dict = {
-            "__builtins__": {},
-            "sqrt": math.sqrt,
-            "sin": math.sin,
-            "cos": math.cos,
-            "tan": math.tan,
-            "pi": math.pi,
-            "e": math.e
-        }
-
-        result = eval(expression, safe_dict)
+        # Вычисляем
+        result = _safe_eval(tree.body)
 
         return {
             "status": "success",
